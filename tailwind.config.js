@@ -16,6 +16,7 @@ module.exports = {
       backgroundImage: {
         'mountain-stars': "url('/assets/mountain-stars.svg')",
         'tiles': "url('/assets/tiles.svg')",
+        'menu': "url('/assets/menu.svg')",
       },
       borderWidth: {
         DEFAULT: '1px',

@@ -39,7 +39,7 @@ export default function Home() {
           <Image src="assets/diner-sign.svg" height={842} width={652} alt="diner-sign" className="bottom-0" />
         </div>
       </div>
-      <div className={`flex flex-col border-t-32 border-light-blue min-h-screen ${inter.className}`}>
+      <div className={`flex flex-col border-t-32 border-light-blue min-h-content ${inter.className}`}>
         <div className="flex flex-col justify-start items-center w-full pt-16 gap-12 text-lg px-52">
           <h1 className={`text-6xl text-turquoise ${zenTokyoZoo.className}`}>
             WELCOME IN, AGGIE!
@@ -83,8 +83,20 @@ export default function Home() {
         </div>
         <div className="bg-tiles bg-cover w-full h-[150px]" />
       </div>
-      <div>
-
+      <div className="flex flex-col w-full min-h-screen bg-pale-yellow">
+        <div className="bg-white h-8 mt-4" />
+        <div className="flex flex-col items-center justify-center py-32">
+          <div className="flex flex-col bg-menu bg-cover w-[1153px] h-[1537px] px-32 py-24">
+            <div className="flex flex-row items-center justify-center">
+              <Image src="assets/sundae.svg" width={260} height={379} alt="sundae" />
+              <Image src="assets/menu-title.svg" width={473} height={273} alt="menu-title" />
+              <div className="flex flex-col items-center justify-center min-w-[260px]">
+                <Image src="assets/pie.svg" width={215} height={189} alt="pie" />
+                <Image src="assets/burger.svg" width={183} height={166} alt="burger" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   )
