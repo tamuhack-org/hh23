@@ -45,7 +45,7 @@ export default function Home() {
             WELCOME IN, AGGIE!
           </h1>
           <p className="text-center">
-            HowdyHack is a 24-hour, themed, <b>beginner focused</b> hackathon <b>exclusively for Texas A&M students</b>, designed to showcase TAMU's diverse range of innovative ideas in a collaborative environment. At the event, you'll have the opportunity to create your own software and hardware products with up to <b>4 team members</b> that wow judges and win prizes. Go gig 'em!
+            HowdyHack is a 24-hour, themed, <b>beginner focused</b> hackathon <b>exclusively for Texas A&M students</b>, designed to showcase TAMU&apos;s diverse range of innovative ideas in a collaborative environment. At the event, you will have the opportunity to create your own software and hardware products with up to <b>4 team members</b> that wow judges and win prizes. Go gig &apos;em!
           </p>
           <div className="flex flex-row justify-between w-full gap-48">
             <div className="flex flex-col w-full gap-4">
@@ -56,7 +56,7 @@ export default function Home() {
                 <b>Click the apply button above!</b> Sign up ASAP to secure your spot.
                 <br />
                 <br />
-                After you sign up, you will receive a confirmation email letting you know you're good to go. You can form a team yourself or find one during the team building portion right before the event.
+                After you sign up, you will receive a confirmation email letting you know you are good to go. You can form a team yourself or find one during the team building portion right before the event.
               </p>
               <div className="flex flex-row w-full justify-center items-center gap-8 p-4">
                 <Image src="assets/root-beer.svg" width={114} height={96} alt="root-beer" />
