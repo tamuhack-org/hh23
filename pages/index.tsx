@@ -95,6 +95,9 @@ export default function Home() {
                 <Image src="assets/burger.svg" width={183} height={166} alt="burger" />
               </div>
             </div>
+            <div className="flex flex-col items-start justify-center">
+              
+            </div>
           </div>
         </div>
       </div>
