@@ -16,6 +16,7 @@ module.exports = {
         'pale-pink': '#FF4F80',
       },
       backgroundImage: {
+        'mountain-stars-small': "url('/assets/mountain-stars-small.svg')",
         'mountain-stars': "url('/assets/mountain-stars.svg')",
         'tiles': "url('/assets/tiles.svg')",
         'menu': "url('/assets/menu.svg')",

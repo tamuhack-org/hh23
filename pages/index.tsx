@@ -13,9 +13,9 @@ export default function Home() {
       className={`${archivo.className}`}
     >
       <div className="bg-dark-purple">
-        <div className="fixed hidden lg:flex items-center justify-between px-8 xl:px-32 py-4 w-screen bg-dark-purple z-50 text-pale-yellow border-b-4 border-pale-yellow">
+        <div className="hidden lg:flex items-center justify-between px-8 xl:px-32 py-4 w-full bg-dark-purple z-50 text-pale-yellow border-b-4 border-pale-yellow">
           <div className="w-1/3">
-            <Link href="/" target="_blank" rel="noopener noreferrer"
+            <Link href="/"
               className="text-3xl rounded-full font-black font-heading navy">
               <Image src="/assets/hh-logo.svg" width={50} height={50} alt="hh-logo" />
             </Link>
@@ -46,9 +46,60 @@ export default function Home() {
         <div className="lg:hidden my-0 w-full bg-dark-purple border-b-4 border-pale-yellow">
           <SmallNavbar />
         </div>
-        <div className="flex flex-col w-full">
-
+        {/* Landing section */}
+        <div className="flex flex-col h-auto mt-6 lg:h-screen w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 md:pt-0 bg-mountain-stars-small lg:bg-mountain-stars bg-cover border-turquoise border-b-[12px]">
+          <div className="flex flex-col items-center w-full gap-6">
+            <div className="flex flex-col items-center w-full gap-2 text-pale-yellow font-bold text-xl">
+              <h1>
+                September 9-10, 2023
+              </h1>
+              <h1>
+                Texas A&M University
+              </h1>
+            </div>
+            <div className="flex flex-row w-full justify-center items-center gap-3 font-extrabold text-sm">
+              <Link href="#" className="py-2 w-32 text-center bg-pale-yellow rounded-lg border-pale-yellow border-2">
+                APPLY
+              </Link>
+              <Link href="#" className="py-2 w-32 text-center bg-dark-purple rounded-lg border-pale-yellow border-2 text-pale-yellow">
+                MENTOR
+              </Link>
+            </div>
+          </div>
+          <Image src="/assets/diner-sign.svg" width={400} height={300} alt="diner-sign" className="-mb-8" />
         </div>
+        {/* Info section */}
+        <div className={`${inter.className} flex flex-col items-center border-t-[12px] border-lighter-blue px-8 pt-8 bg-white w-full`}>
+          <h1 className={`${zenTokyoZoo.className} text-center text-turquoise text-xl mb-2`}>
+            WELCOME IN, AGGIE!
+          </h1>
+          <p className="text-xs text-center mb-8">
+            HowdyHack is a 24-hour, themed, <b>beginner focused</b> hackathon <b>exclusively for Texas A&M students</b>, designed to showcase TAMU&apos;s diverse range of innovative ideas in a collaborative environment. At the event, you&apos;ll have the opportunity to create your own software and hardware products with up to <b>4 team members</b> that wow judges and win prizes. Go gig &apos;em!
+          </p>
+          <div className="flex flex-col items-center justify-center gap-4 w-full">
+            <div className="flex flex-col justify-center items-start border-[rgb(255,79,128,0.5)] border-double rounded-3xl border-8 p-5 w-full gap-2">
+              <h2 className="text-turquoise font-bold text-md">Location</h2>
+              <p className="text-xs">
+                Bethancourt Ballroom (MSC 2300)<br />
+                730 Olsen Blvd, College Station, TX 77845
+              </p>
+            </div>
+            <div className="flex flex-col justify-center items-start border-[rgb(255,79,128,0.5)] border-double rounded-3xl border-8 p-5 w-full gap-2">
+              <h2 className="text-turquoise font-bold text-md">How to Participate</h2>
+              <p className="text-xs">
+                Click the apply button above! Sign up ASAP to secure your spot. You will receive a confirmation email letting you know you&apos;re good to go.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* Diner booth */}
+        <div className="flex flex-col items-center justify-center bg-white -mb-4 pt-4">
+          <Image src="/assets/diner-booth.svg" width={200} height={200} alt="diner-booth" className="z-10" />
+          <div className="relative w-full h-2 -px-8 bg-[rgb(255,79,128,0.2)] bottom-20 mb-2" />
+          <div className="relative w-full h-1 bg-[rgb(255,79,128,0.2)] bottom-20" />
+        </div>
+        {/* Tiles */}
+        <div className="bg-tiles w-full bg-cover h-24 bg-white" />
       </div>
     </main>
   )
