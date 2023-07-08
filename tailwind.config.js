@@ -11,7 +11,9 @@ module.exports = {
         'dark-purple': '#2D284C',
         'pale-yellow': '#FFCC67',
         'turquoise': '#3FB3CF',
-        'light-blue': '#B3F0FF',
+        'lighter-blue': '#B3F0FF',
+        'light-blue': '#61E0FF',
+        'pale-pink': '#FF4F80',
       },
       backgroundImage: {
         'mountain-stars': "url('/assets/mountain-stars.svg')",
