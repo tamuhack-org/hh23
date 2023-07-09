@@ -17,14 +17,12 @@ const SmallNavbar = () => {
         <MdClose size={30} className="fill-pale-yellow cursor-pointer" onClick={onClick} />
         :
         <MdMenu size={30} className="fill-pale-yellow cursor-pointer" onClick={onClick} />}
-      <nav className={`${dropdownIsActive ? 'visible' : 'invisible'} absolute bg-dark-purple text-pale-yellow font-bold right-8 top-16 border-4 border-pale-yellow py-4 pr-16 pl-4 shadow-2xl rounded-lg`}>
-        <ul className="flex flex-col gap-2">
-          <li><Link href="#info" onClick={onClick}>Info</Link></li>
-          <li><Link href="#faq" onClick={onClick}>FAQ</Link></li>
-          <li><Link href="#schedule" onClick={onClick}>Schedule</Link></li>
-          <li><Link href="#prizes" onClick={onClick}>Prizes</Link></li>
-          <li><Link href="#resources" onClick={onClick}>Resources</Link></li>
-        </ul>
+      <nav className={`${dropdownIsActive ? 'visible' : 'invisible'} absolute flex flex-col bg-dark-purple text-pale-yellow font-bold right-8 top-16 border-2 gap-2 border-pale-yellow py-4 shadow-2xl rounded-lg`}>
+<Link href="#info" onClick={onClick} className="pr-16 pl-4">Info</Link>
+          <Link href="#faq" onClick={onClick} className="pr-16 pl-4">FAQ</Link>
+          <Link href="#schedule" onClick={onClick} className="pr-16 pl-4">Schedule</Link>
+          <Link href="#prizes" onClick={onClick} className="pr-16 pl-4">Prizes</Link>
+          <Link href="#resources" onClick={onClick} className="pr-16 pl-4">Resources</Link>
       </nav>
     </div>
   );

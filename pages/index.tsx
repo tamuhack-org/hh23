@@ -2,6 +2,8 @@ import Image from 'next/image'
 import { Archivo, Zen_Tokyo_Zoo, Inter } from 'next/font/google'
 import Link from 'next/link'
 import SmallNavbar from './components/SmallNavbar'
+import { faqMenuItems } from './constants'
+import FaqMenuItem from './components/FaqMenuItem'
 
 const archivo = Archivo({ subsets: ['latin'] })
 const zenTokyoZoo = Zen_Tokyo_Zoo({ weight: '400', subsets: ['latin'] })
@@ -17,7 +19,7 @@ export default function Home() {
           <div className="w-1/3">
             <Link href="/"
               className="text-3xl rounded-full font-black font-heading navy">
-              <Image src="/assets/hh-logo.svg" width={50} height={50} alt="hh-logo" />
+              <Image src="/assets/hh-logo.png" width={50} height={50} alt="hh-logo" />
             </Link>
           </div>
           <div className="flex justify-center items-center gap-8 w-1/3 font-bold text-lg">
@@ -43,12 +45,12 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="lg:hidden my-0 w-full bg-dark-purple border-b-4 border-pale-yellow">
+        <div className="lg:hidden my-0 w-full bg-dark-purple border-b-2 border-pale-yellow">
           <SmallNavbar />
         </div>
         {/* Landing section */}
-        <div className="flex flex-col h-auto mt-6 lg:h-screen w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 md:pt-0 bg-mountain-stars-small lg:bg-mountain-stars bg-cover border-turquoise border-b-[12px]">
-          <div className="flex flex-col items-center w-full gap-6">
+        <div className="flex flex-col h-auto mt-4 lg:h-screen w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 md:pt-0 bg-mountain-stars-small lg:bg-mountain-stars bg-cover border-turquoise border-b-[12px]">
+          <div className="flex flex-col items-center w-full gap-4">
             <div className="flex flex-col items-center w-full gap-2 text-pale-yellow font-bold text-xl">
               <h1>
                 September 9-10, 2023
@@ -66,7 +68,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <Image src="/assets/diner-sign.svg" width={400} height={300} alt="diner-sign" className="-mb-8" />
+          <Image src="/assets/diner-sign.png" width={400} height={300} alt="diner-sign" className="-mb-8" />
         </div>
         {/* Info section */}
         <div className={`${inter.className} flex flex-col items-center border-t-[12px] border-lighter-blue px-8 pt-8 bg-white w-full`}>
@@ -94,12 +96,39 @@ export default function Home() {
         </div>
         {/* Diner booth */}
         <div className="flex flex-col items-center justify-center bg-white -mb-4 pt-4">
-          <Image src="/assets/diner-booth.svg" width={200} height={200} alt="diner-booth" className="z-10" />
+          <Image src="/assets/diner-booth.png" width={200} height={200} alt="diner-booth" className="z-10" />
           <div className="relative w-full h-2 -px-8 bg-[rgb(255,79,128,0.2)] bottom-20 mb-2" />
           <div className="relative w-full h-1 bg-[rgb(255,79,128,0.2)] bottom-20" />
         </div>
         {/* Tiles */}
         <div className="bg-tiles w-full bg-cover h-24 bg-white" />
+        {/* FAQ Section */}
+        <div className="flex flex-col items-center justify-center bg-paler-yellow pt-12">
+          <div className="relative w-full h-4 bg-white -top-10 mb-2" />
+          {/* Top menu border */}
+          <div className="relative flex flex-col w-full bg-black border-white border-dashed border-b-16 pt-3 rounded-t-lg">
+            <div className="absolute w-[40px] bg-black h-[40px] -mt-3 rounded-tl-lg" />
+            <div className="absolute right-0 w-[40px] bg-black h-[40px] -mt-3 rounded-tr-lg" />
+          </div>
+          <div className="flex flex-col w-full bg-black px-3 py-3">
+            <div className="flex flex-col w-full bg-black border-white border-dashed border-x-16 px-3">
+              <div className="flex flex-col w-full bg-white p-6 gap-4">
+                {faqMenuItems.map((faqMenuItem, i) =>
+                  <FaqMenuItem question={faqMenuItem.question} answer={faqMenuItem.answer} key={i} />
+                )}
+              </div>
+            </div>
+          </div>
+          {/* Bottom menu border */}
+          <div className="relative flex flex-col w-full bg-black border-white border-dashed border-t-16 pb-3 rounded-b-lg">
+            <div className="absolute bottom-0 w-[40px] bg-black h-[40px] rounded-bl-lg" />
+            <div className="absolute bottom-0 right-0 w-[40px] bg-black h-[40px] rounded-br-lg" />
+          </div>
+        </div>
+        <div className="w-full bg-waves bg-cover h-[283px] bg-paler-yellow" />
+        <div className="flex flex-col items-center bg-schedule-blue w-full p-4">
+          <Image src="/assets/schedule-title.png" width={500} height={200} alt="schedule-title" />
+        </div>
       </div>
     </main>
   )
