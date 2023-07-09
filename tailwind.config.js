@@ -16,12 +16,15 @@ module.exports = {
         'light-blue': '#61E0FF',
         'schedule-blue': '#29C6FF',
         'pale-pink': '#FF4F80',
+        'prizes-gray': '#302C27',
+        'prizes-light-gray': '#797067',
       },
       backgroundImage: {
         'mountain-stars-small': "url('/assets/mountain-stars-small.svg')",
         'mountain-stars': "url('/assets/mountain-stars.svg')",
         'tiles': "url('/assets/tiles.svg')",
         'waves': "url('/assets/waves.svg')",
+        'receipt': "url('/assets/receipt.png')",
       },
       borderWidth: {
         DEFAULT: '1px',

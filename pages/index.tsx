@@ -2,12 +2,13 @@ import Image from 'next/image'
 import { Archivo, Zen_Tokyo_Zoo, Inter } from 'next/font/google'
 import Link from 'next/link'
 import SmallNavbar from './components/SmallNavbar'
-import { faqMenuItems } from './constants'
+import { faqMenuItems, saturdayScheduleItems, sundayScheduleItems } from './constants'
 import FaqMenuItem from './components/FaqMenuItem'
+import Receipt from './components/Receipt'
 
-const archivo = Archivo({ subsets: ['latin'] })
-const zenTokyoZoo = Zen_Tokyo_Zoo({ weight: '400', subsets: ['latin'] })
-const inter = Inter({ subsets: ['latin'] })
+const archivo = Archivo({ subsets: ['latin'] });
+const zenTokyoZoo = Zen_Tokyo_Zoo({ weight: '400', subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
@@ -49,7 +50,7 @@ export default function Home() {
           <SmallNavbar />
         </div>
         {/* Landing section */}
-        <div className="flex flex-col h-auto mt-4 lg:h-screen w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 md:pt-0 bg-mountain-stars-small lg:bg-mountain-stars bg-cover border-turquoise border-b-[12px]">
+        <div className="flex flex-col h-auto mt-6 lg:h-screen w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 lg:pt-0 bg-mountain-stars-small lg:bg-mountain-stars bg-cover border-turquoise border-b-[12px]">
           <div className="flex flex-col items-center w-full gap-4">
             <div className="flex flex-col items-center w-full gap-2 text-pale-yellow font-bold text-xl">
               <h1>
@@ -63,7 +64,7 @@ export default function Home() {
               <Link href="#" className="py-2 w-32 text-center bg-pale-yellow rounded-lg border-pale-yellow border-2">
                 APPLY
               </Link>
-              <Link href="#" className="py-2 w-32 text-center bg-dark-purple rounded-lg border-pale-yellow border-2 text-pale-yellow">
+              <Link href="#" className="py-2 w-32 text-center bg-transparent rounded-lg border-pale-yellow border-2 text-pale-yellow">
                 MENTOR
               </Link>
             </div>
@@ -126,8 +127,25 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full bg-waves bg-cover h-[283px] bg-paler-yellow" />
-        <div className="flex flex-col items-center bg-schedule-blue w-full p-4">
+        {/* Schedule section */}
+        <div className="flex flex-col items-center bg-schedule-blue w-full px-4 pt-4 pb-16 gap-8">
           <Image src="/assets/schedule-title.png" width={500} height={200} alt="schedule-title" />
+          <Receipt day="SATURDAY" scheduleItems={saturdayScheduleItems} />
+          <Receipt day="SUNDAY" scheduleItems={sundayScheduleItems} />
+        </div>
+        {/* Schedule to Prizes transition */}
+        <div className="w-full bg-prizes-gray h-6" />
+        <div className="w-full bg-schedule-blue h-2" />
+        <div className="w-full bg-prizes-gray h-5" />
+        <div className="w-full bg-schedule-blue h-1" />
+        <div className="w-full bg-prizes-gray h-5" />
+        <div className="w-full bg-schedule-blue h-[2px]" />
+        {/* Prizes section */}
+        <div className="flex flex-col items-center justify-center bg-prizes-gray w-full px-4 py-8">
+          <div className="flex flex-col items-center justify-center w-full rounded-2xl border-prizes-light-gray border-4 p-4">
+            <Image src="/assets/prizes-title.png" width={500} height={200} alt="prizes-title" />
+
+          </div>
         </div>
       </div>
     </main>
