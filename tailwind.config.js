@@ -18,6 +18,7 @@ module.exports = {
         'pale-pink': '#FF4F80',
         'prizes-gray': '#302C27',
         'prizes-light-gray': '#797067',
+        'mint-green': '#92CEAB',
       },
       backgroundImage: {
         'mountain-stars-small': "url('/assets/mountain-stars-small.svg')",

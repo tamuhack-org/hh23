@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Archivo, Zen_Tokyo_Zoo, Inter } from 'next/font/google'
 import Link from 'next/link'
 import SmallNavbar from './components/SmallNavbar'
-import { faqMenuItems, saturdayScheduleItems, sundayScheduleItems } from './constants'
+import { faqMenuItems, prizes, saturdayScheduleItems, sundayScheduleItems } from './constants'
 import FaqMenuItem from './components/FaqMenuItem'
 import Receipt from './components/Receipt'
 
@@ -16,7 +16,7 @@ export default function Home() {
       className={`${archivo.className}`}
     >
       <div className="bg-dark-purple">
-        <div className="hidden lg:flex items-center justify-between px-8 xl:px-32 py-4 w-full bg-dark-purple z-50 text-pale-yellow border-b-4 border-pale-yellow">
+        <div className="hidden lg:flex items-center justify-between px-8 xl:px-32 py-4 w-full bg-dark-purple z-50 text-pale-yellow border-b-3 border-pale-yellow">
           <div className="w-1/3">
             <Link href="/"
               className="text-3xl rounded-full font-black font-heading navy">
@@ -41,7 +41,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="w-1/3 flex justify-end items-center">
-            <Link href="https://tamuhack.org" className="xl:flex text-4xl font-bold mr-8 ">
+            <Link href="https://tamuhack.org" target="_blank" rel="noopener" className="xl:flex text-4xl font-bold mr-8 ">
               th
             </Link>
           </div>
@@ -102,14 +102,14 @@ export default function Home() {
           <div className="relative w-full h-1 bg-[rgb(255,79,128,0.2)] bottom-20" />
         </div>
         {/* Tiles */}
-        <div className="bg-tiles w-full bg-cover h-24 bg-white" />
+        <div className="bg-tiles w-full bg-cover h-24 xl:h-[147px] bg-white" />
         {/* FAQ Section */}
         <div className="flex flex-col items-center justify-center bg-paler-yellow pt-12">
           <div className="relative w-full h-4 bg-white -top-10 mb-2" />
           {/* Top menu border */}
-          <div className="relative flex flex-col w-full bg-black border-white border-dashed border-b-16 pt-3 rounded-t-lg">
-            <div className="absolute w-[40px] bg-black h-[40px] -mt-3 rounded-tl-lg" />
-            <div className="absolute right-0 w-[40px] bg-black h-[40px] -mt-3 rounded-tr-lg" />
+          <div className="relative flex flex-col w-full bg-black border-white border-dashed border-b-16 pt-3 rounded-t-xl">
+            <div className="absolute w-[40px] bg-black h-[40px] -mt-3 rounded-tl-xl" />
+            <div className="absolute right-0 w-[40px] bg-black h-[40px] -mt-3 rounded-tr-xl" />
           </div>
           <div className="flex flex-col w-full bg-black px-3 py-3">
             <div className="flex flex-col w-full bg-black border-white border-dashed border-x-16 px-3">
@@ -121,9 +121,9 @@ export default function Home() {
             </div>
           </div>
           {/* Bottom menu border */}
-          <div className="relative flex flex-col w-full bg-black border-white border-dashed border-t-16 pb-3 rounded-b-lg">
-            <div className="absolute bottom-0 w-[40px] bg-black h-[40px] rounded-bl-lg" />
-            <div className="absolute bottom-0 right-0 w-[40px] bg-black h-[40px] rounded-br-lg" />
+          <div className="relative flex flex-col w-full bg-black border-white border-dashed border-t-16 pb-3 rounded-b-xl">
+            <div className="absolute bottom-0 w-[40px] bg-black h-[40px] rounded-bl-xl" />
+            <div className="absolute bottom-0 right-0 w-[40px] bg-black h-[40px] rounded-br-xl" />
           </div>
         </div>
         <div className="w-full bg-waves bg-cover h-[283px] bg-paler-yellow" />
@@ -142,11 +142,39 @@ export default function Home() {
         <div className="w-full bg-schedule-blue h-[2px]" />
         {/* Prizes section */}
         <div className="flex flex-col items-center justify-center bg-prizes-gray w-full px-4 py-8">
-          <div className="flex flex-col items-center justify-center w-full rounded-2xl border-prizes-light-gray border-4 p-4">
+          <div className="flex flex-col items-center justify-center max-[593px]:w-full w-[593px] rounded-2xl border-prizes-light-gray border-4 p-4 sm:p-10 gap-6">
             <Image src="/assets/prizes-title.png" width={500} height={200} alt="prizes-title" />
-
+            <div className="flex flex-col w-full items-center justify-center gap-6">
+              {prizes.map((prize, i) =>
+                <div className="flex flex-row justify-center items-center w-full gap-4" key={i}>
+                  <Image src="/assets/mint-green-circle.svg" width={12} height={12} alt="mint-green-circle" />
+                  <div className="flex flex-col rounded-3xl w-full bg-white border-4 border-mint-green p-3 gap-1">
+                    <h1 className="font-bold text-sm">{prize.title}</h1>
+                    <p className="text-xs">{prize.description}</p>
+                    <h2 className="font-bold text-xs">{prize.prize}</h2>
+                  </div>
+                  <Image src="/assets/mint-green-circle.svg" width={12} height={12} alt="mint-green-circle" />
+                </div>
+              )}
+              <div className="flex flex-row justify-between items-center w-full gap-6 mt-4">
+                <div className="bg-prizes-light-gray w-1/2 h-12 rounded-3xl" />
+                <div className="flex flex-row justify-end items-center w-1/2 gap-2">
+                  <Image src="/assets/light-gray-circle.svg" width={20} height={20} alt="mint-green-circle" />
+                  <Image src="/assets/light-gray-circle.svg" width={20} height={20} alt="mint-green-circle" />
+                  <Link href="#">
+                    <Image src="/assets/hacker-queue.png" width={100} height={20} alt="hacker-queue" />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        {/* Prizes to Resources transition */}
+        <div className="bg-tiles w-full bg-cover h-24 xl:h-[147px] bg-white flex flex-col justify-between">
+          <div className="w-full bg-gradient-to-b from-prizes-gray from-10% to-transparent h-12 xl:h-[73px]" />
+          <div className="w-full bg-gradient-to-t from-white from-10% to-transparent h-12 xl:h-[73px]" />
+        </div>
+        {/* Resources section */}
       </div>
     </main>
   )
