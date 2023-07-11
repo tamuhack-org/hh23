@@ -242,7 +242,7 @@ export default function Home() {
                 name="EMAIL"
                 className="rounded-lg text-xs p-1 bg-[rgba(217,217,217,0.09)] border border-white"
                 id="mce-EMAIL"
-                value=""
+                readOnly
               />
               <button className="clear">
                 <input
@@ -258,7 +258,7 @@ export default function Home() {
                   type="text"
                   name="b_43a795784ca963e25903a0da6_9937fe4fc5"
                   tabIndex={-1}
-                  value=""
+                  defaultValue=""
                 />
               </div>
             </form>
