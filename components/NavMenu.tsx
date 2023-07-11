@@ -1,18 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
-import { MdClose, MdMenu, MdOpenInNew } from 'react-icons/md';
-import Link from 'next/link';
+import Link from "next/link";
+import { useState } from "react";
+import { MdClose, MdMenu, MdOpenInNew } from "react-icons/md";
 
-const SmallNavbar = () => {
+const NavMenu = () => {
   const [dropdownIsActive, setDropdownIsActive] = useState(false);
   const onClick = () => setDropdownIsActive(!dropdownIsActive);
 
   return (
-    <div className="flex flex-row justify-between items-center w-full p-3 px-8">
-      <Link href="/"
-        className="text-3xl rounded-full font-black font-heading navy">
-        <Image src="/assets/hh-logo.png" width={50} height={50} alt="hh-logo" />
-      </Link>
+    <>
       {dropdownIsActive ?
         <MdClose size={30} className="fill-pale-yellow cursor-pointer" onClick={onClick} />
         :
@@ -28,8 +23,8 @@ const SmallNavbar = () => {
           <MdOpenInNew size={22} />
         </Link>
       </nav>
-    </div>
+    </>
   );
 };
 
-export default SmallNavbar;
+export default NavMenu;
