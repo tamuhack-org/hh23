@@ -16,6 +16,7 @@ module.exports = {
         'light-blue': '#61E0FF',
         'schedule-blue': '#29C6FF',
         'pale-pink': '#FF4F80',
+        'resources-pink': '#FF5081',
         'prizes-gray': '#302C27',
         'prizes-light-gray': '#797067',
         'mint-green': '#92CEAB',

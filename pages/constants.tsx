@@ -196,3 +196,21 @@ export const prizes = [
     prize: 'Nintendo Switch Lite',
   },
 ];
+
+export const resources = [
+  {
+    name: 'HelpR',
+    link: 'https://helpr.vercel.app',
+    description: 'Description of resource',
+  },
+  {
+    name: 'HelpR',
+    link: 'https://helpr.vercel.app',
+    description: 'Description of resource',
+  },
+  {
+    name: 'HelpR',
+    link: 'https://helpr.vercel.app',
+    description: 'Description of resource',
+  },
+];

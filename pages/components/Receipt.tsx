@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import { Open_Sans, Poppins } from 'next/font/google';
+import { Space_Mono, Poppins } from 'next/font/google';
 
 const poppins = Poppins({ weight: ['400', '100', '200', '300', '500', '600', '700', '800', '900'], subsets: ['latin'] });
-const openSans = Open_Sans({ subsets: ['latin'] });
+const spaceMono = Space_Mono({ weight: ['400', '700'], subsets: ['latin'] });
 
 interface ReceiptProps {
   day: string;
@@ -16,7 +16,7 @@ interface ReceiptProps {
 
 const Receipt = ({ day, scheduleItems }: ReceiptProps) => {
   return (
-    <div className={`${openSans.className} flex flex-col items-center justify-center bg-receipt bg-cover max-[571px]:w-full w-[571px] overflow-clip p-6 gap-4`}>
+    <div className={`${spaceMono.className} flex flex-col items-center justify-center bg-receipt bg-cover max-[571px]:w-full w-[571px] overflow-clip p-6 gap-4`}>
       <h1 className={`${poppins.className} font-bold text-xl`}>{day}</h1>
       <div className="w-4/5 border-y-2 border-black h-6 mb-4" />
       <div className="flex flex-row justify-between items-center text-xs font-bold w-full text-left">
