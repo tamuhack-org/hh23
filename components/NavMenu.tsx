@@ -1,18 +1,38 @@
 import Link from "next/link";
-import { useState } from "react";
-import { MdClose, MdMenu, MdOpenInNew } from "react-icons/md";
+import { Dispatch, MutableRefObject, SetStateAction, useEffect, useRef, useState } from "react";
+import { MdMenu, MdOpenInNew } from "react-icons/md";
+
+function listenForOutsideClicks(listening: boolean, setListening: Dispatch<SetStateAction<boolean>>, menuRef: MutableRefObject<any>, setDropdownIsActive: Dispatch<SetStateAction<boolean>>) {
+  return () => {
+    if (listening) return;
+    if (!menuRef.current) return;
+    setListening(true);
+    [`click`, `touchstart`].forEach((type) => {
+      document.addEventListener(`click`, (evt) => {
+        if (menuRef.current.contains(evt.target)) return;
+        setDropdownIsActive(false);
+      });
+    });
+  }
+}
 
 const NavMenu = () => {
+  const menuRef = useRef(null);
+  const [listening, setListening] = useState(false);
   const [dropdownIsActive, setDropdownIsActive] = useState(false);
   const onClick = () => setDropdownIsActive(!dropdownIsActive);
 
+  useEffect(listenForOutsideClicks(
+    listening,
+    setListening,
+    menuRef,
+    setDropdownIsActive,
+  ))
+
   return (
-    <>
-      {dropdownIsActive ?
-        <MdClose size={30} className="fill-pale-yellow cursor-pointer" onClick={onClick} />
-        :
-        <MdMenu size={30} className="fill-pale-yellow cursor-pointer" onClick={onClick} />}
-      <nav className={`${dropdownIsActive ? 'visible' : 'invisible'} absolute flex flex-col bg-dark-purple text-pale-yellow font-bold right-8 top-16 border-2 gap-2 border-pale-yellow py-4 shadow-2xl rounded-lg`}>
+    <div ref={menuRef}>
+      <MdMenu size={30} className="fill-pale-yellow cursor-pointer" onClick={onClick} />
+      <nav className={`${dropdownIsActive ? 'opacity-100' : 'opacity-0'} absolute flex flex-col bg-dark-purple text-pale-yellow font-bold right-8 top-16 border-2 gap-2 border-pale-yellow py-4 shadow-2xl rounded-lg transition-opacity duration-200`}>
         <Link href="#info" onClick={onClick} className="pr-12 pl-4">Info</Link>
         <Link href="#faq" onClick={onClick} className="pr-12 pl-4">FAQ</Link>
         <Link href="#schedule" onClick={onClick} className="pr-12 pl-4">Schedule</Link>
@@ -23,7 +43,7 @@ const NavMenu = () => {
           <MdOpenInNew size={22} />
         </Link>
       </nav>
-    </>
+    </div>
   );
 };
 
