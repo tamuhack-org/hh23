@@ -25,8 +25,8 @@ export default function Home() {
         <div className="lg:hidden my-0 w-full bg-dark-purple border-b-2 border-pale-yellow">
           <SmallNavbar />
         </div>
-        {/* Landing section */}
-        <div className="flex flex-col h-auto mt-6 lg:h-screen w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 lg:pt-0 bg-mountain-stars-small lg:bg-mountain-stars bg-cover border-turquoise border-b-[12px]">
+        {/* Mobile and tablet landing section */}
+        <div className="lg:hidden flex flex-col h-auto mt-6 lg:h-screen w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 lg:pt-0 bg-mountain-stars-small lg:bg-mountain-stars bg-cover border-turquoise border-b-[12px]">
           <div className="flex flex-col items-center w-full gap-4">
             <div className="flex flex-col items-center w-full gap-2 text-pale-yellow font-bold text-xl">
               <h1>
@@ -46,6 +46,9 @@ export default function Home() {
             </div>
           </div>
           <Image src="/assets/diner-sign.png" width={400} height={300} alt="diner-sign" className="-mb-8" />
+        </div>
+        <div className="lg:flex hidden flex-col h-auto mt-6 w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 lg:pt-0 bg-mountain-stars-small lg:bg-mountain-stars bg-cover border-turquoise border-b-[20px]">
+
         </div>
         <InfoSection />
         <FaqSection />

@@ -11,6 +11,7 @@ const PrizesSection = () => {
           <Image src="/assets/prizes-star.svg" width={75} height={100} alt="prizes-star" />
         </div>
         <Image src="/assets/prizes-title-big.png" width={800} height={200} alt="prizes-title" className="mt-0 lg:-mt-8" />
+        {/* Mobile and tablet */}
         <div className="flex flex-col w-full items-center justify-center gap-6 lg:hidden">
           {prizes.map((prize, i) =>
             <div className="flex flex-row justify-center items-center w-full gap-4" key={i}>
@@ -34,6 +35,7 @@ const PrizesSection = () => {
             </div>
           </div>
         </div>
+        {/* Desktop */}
         <div className="hidden lg:flex flex-col w-full justify-center items-center gap-6">
           <div className="flex flex-row justify-center items-center w-full gap-8 mt-8">
             <Image src="/assets/mint-green-arrow.svg" width={50} height={50} alt="mint-green-arrow" className="scale-[-1]" />
@@ -66,7 +68,7 @@ const PrizesSection = () => {
           <div className="flex flex-col items-center justify-center gap-6 w-full">
             {prizes.filter((_, i) => i >= 3).map((prize, i) =>
               <div className="flex flex-row justify-center items-center w-full gap-4" key={i}>
-                <div className="flex flex-col rounded-3xl w-full bg-white border-4 border-mint-green p-5 gap-1">
+                <div className="flex flex-col rounded-3xl w-full bg-white border-4 border-mint-green p-5 gap-2">
                   <h1 className="font-bold text-xl">{prize.title}</h1>
                   <p className="text-base">{prize.description}</p>
                   <h2 className="font-bold text-base">{prize.prize}</h2>
