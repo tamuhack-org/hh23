@@ -16,10 +16,10 @@ interface ReceiptProps {
 
 const Receipt = ({ day, scheduleItems }: ReceiptProps) => {
   return (
-    <div className={`${spaceMono.className} flex flex-col items-center justify-center bg-receipt bg-cover max-[571px]:w-full w-[571px] overflow-clip p-6 gap-4`}>
-      <h1 className={`${poppins.className} font-bold text-xl`}>{day}</h1>
+    <div className={`${spaceMono.className} flex flex-col items-center justify-center bg-receipt bg-cover max-[571px]:w-full w-[571px] overflow-clip p-6 lg:p-10 gap-4`}>
+      <h1 className={`${poppins.className} font-bold text-xl lg:text-2xl`}>{day}</h1>
       <div className="w-4/5 border-y-2 border-black h-6 mb-4" />
-      <div className="flex flex-row justify-between items-center text-xs font-bold w-full text-left">
+      <div className="flex flex-row justify-between items-center text-xs lg:text-sm font-bold w-full text-left">
         <h2 className="w-[30%]">
           TIME
         </h2>
@@ -31,7 +31,7 @@ const Receipt = ({ day, scheduleItems }: ReceiptProps) => {
         </h2>
       </div>
       {scheduleItems.map((scheduleItem, i) =>
-        <div className="flex flex-row justify-between items-center border-b border-black text-xs w-full text-left py-2" key={i}>
+        <div className="flex flex-row justify-between items-center border-b border-black text-xs lg:text-sm w-full text-left py-2" key={i}>
           <p className="w-[30%]">
             {scheduleItem.time}
           </p>
@@ -43,7 +43,7 @@ const Receipt = ({ day, scheduleItems }: ReceiptProps) => {
           </p>
         </div>
       )}
-      <Image src="/assets/barcode.png" width={177} height={69} alt="barcode" className="py-2" />
+      <Image src="/assets/barcode.png" width={177} height={69} alt="barcode" className="py-2 lg:py-8" />
     </div>
   );
 };

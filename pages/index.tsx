@@ -51,10 +51,14 @@ export default function Home() {
         <FaqSection />
         <div className="w-full bg-waves bg-cover h-[283px] bg-paler-yellow" />
         {/* Schedule section */}
-        <div id="schedule" className="flex flex-col items-center bg-schedule-blue w-full px-4 pt-4 pb-16 gap-8">
-          <Image src="/assets/schedule-title.png" width={500} height={200} alt="schedule-title" />
-          <Receipt day="SATURDAY" scheduleItems={saturdayScheduleItems} />
-          <Receipt day="SUNDAY" scheduleItems={sundayScheduleItems} />
+        <div id="schedule" className="flex flex-col items-center bg-schedule-blue w-full px-4 pt-4 lg:pt-0 pb-16 gap-8 lg:gap-16">
+          <Image src="/assets/schedule-title.png" width={500} height={200} alt="schedule-title" className="lg:hidden" />
+          <Image src="/assets/schedule-title-big.png" width={700} height={200} alt="schedule-title" className="hidden lg:flex" />
+          <div className="relative flex flex-col lg:flex-row items-center lg:items-start lg:justify-center max-[1206px]:w-full w-[1206px] gap-8">
+            <Receipt day="SATURDAY" scheduleItems={saturdayScheduleItems} />
+            <Receipt day="SUNDAY" scheduleItems={sundayScheduleItems} />
+            <Image src="/assets/retro-rev.png" width={250} height={200} alt="retro-rev" className="hidden lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
+          </div>
         </div>
         {/* Schedule to Prizes transition */}
         <div className="w-full bg-prizes-gray h-6" />
@@ -83,6 +87,6 @@ export default function Home() {
         {/* Footer */}
         <Footer />
       </div>
-    </main>
+    </main >
   )
 };
