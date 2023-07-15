@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <div className="hidden lg:flex items-center justify-between px-8 xl:px-32 py-4 w-full bg-dark-purple z-50 text-pale-yellow border-b-3 border-pale-yellow">
+    <div className="hidden lg:flex items-center justify-between px-8 xl:px-24 py-4 w-full bg-dark-purple z-50 text-pale-yellow border-b-3 border-pale-yellow">
       <div className="w-1/3">
         <Link href="/"
           className="text-3xl rounded-full font-black font-heading navy">
