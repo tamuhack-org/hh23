@@ -3,6 +3,7 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -14,12 +15,14 @@ module.exports = {
         'dark-purple': '#2D284C',
         'pale-yellow': '#FFCC67',
         'paler-yellow': '#FAD17F',
+        'light-theme-yellow': '#FEEBA6',
         'turquoise': '#3FB3CF',
         'lighter-blue': '#B3F0FF',
         'light-blue': '#61E0FF',
         'schedule-blue': '#29C6FF',
         'pale-pink': '#FF4F80',
         'resources-pink': '#FF5081',
+        'light-theme-pink': '#FF3977',
         'prizes-gray': '#302C27',
         'prizes-light-gray': '#797067',
         'mint-green': '#92CEAB',
@@ -27,6 +30,7 @@ module.exports = {
       backgroundImage: {
         'mountain-stars-small': "url('/assets/mountain-stars-small.svg')",
         'mountain-stars': "url('/assets/mountain-stars.svg')",
+        'light-mountain-stars': "url('/assets/light-mountain-stars.svg')",
         'tiles': "url('/assets/tiles.svg')",
         'waves': "url('/assets/waves.svg')",
         'receipt': "url('/assets/receipt.png')",
@@ -45,25 +49,33 @@ module.exports = {
       },
       boxShadow: {
         'pale-yellow-glow': '0 0 1em rgba(255,204,103,0.5);',
+        'light-theme-pink-glow': '0 0 1em rgba(255,57,119,0.5);',
       },
       dropShadow: {
         'pale-yellow-glow': '0 0 1em rgba(255,204,103,0.5);',
       },
       textShadow: {
         'pale-yellow-glow': '0 0 1em rgb(255,204,103,0.5);',
+        'light-theme-pink-glow': '0 0 1em rgb(255,57,119,0.5);',
         'sm-pale-yellow-glow': '0 0 0.5em rgb(255,204,103,0.5);',
       },
       transitionProperty: {
         'text-shadow': 'text-shadow',
+        'display': 'display',
       },
       animation: {
-        'blink': 'blink 12s infinite',
+        'blink-yellow': 'blink-yellow 12s infinite',
+        'blink-pink': 'blink-pink 12s infinite',
       },
       keyframes: {
-        blink: {
+        'blink-yellow': {
           '20%, 24%, 55%': { color: 'transparent', 'text-shadow': 'none' },
           '0%, 19%, 21%, 23%, 25%, 54%, 56%, 100%': { color: '#FFCC67', 'text-shadow': '0 0 0.5em rgb(255,204,103,0.75);' },
-        }
+        },
+        'blink-pink': {
+          '20%, 24%, 55%': { color: 'transparent', 'text-shadow': 'none' },
+          '0%, 19%, 21%, 23%, 25%, 54%, 56%, 100%': { color: '#FF3977', 'text-shadow': '0 0 0.5em rgb(255,57,119,0.75);' },
+        },
       },
     },
   },

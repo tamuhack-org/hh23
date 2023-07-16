@@ -32,8 +32,8 @@ const NavMenu = () => {
 
   return (
     <div ref={menuRef}>
-      <MdMenu size={30} className="fill-pale-yellow cursor-pointer" onClick={onClick} />
-      <nav className={`${dropdownIsActive ? 'flex' : 'hidden'} absolute flex-col bg-dark-purple text-pale-yellow font-bold right-8 top-16 border-2 gap-2 border-pale-yellow py-4 shadow-2xl rounded-lg transition-opacity duration-200`}>
+      <MdMenu size={30} className="fill-light-theme-pink dark:fill-pale-yellow cursor-pointer" onClick={onClick} />
+      <nav className={`${dropdownIsActive ? 'flex' : 'hidden'} absolute flex-col bg-light-theme-yellow dark:bg-dark-purple text-light-theme-pink dark:text-pale-yellow font-bold right-8 top-16 border-2 gap-2 border-light-theme-pink dark:border-pale-yellow py-4 shadow-2xl rounded-lg transition-display duration-200`}>
         <AnchorLink href="#info" onClick={onClick} className="pr-12 pl-4">Info</AnchorLink>
         <AnchorLink href="#faq" onClick={onClick} className="pr-12 pl-4">FAQ</AnchorLink>
         <AnchorLink href="#schedule" onClick={onClick} className="pr-12 pl-4">Schedule</AnchorLink>

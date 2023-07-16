@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import { MdClose, MdMenu, MdOpenInNew } from 'react-icons/md';
 import Link from 'next/link';
 import NavMenu from './NavMenu';
+import { useTheme } from 'next-themes';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 const SmallNavbar = () => {
-  const [dropdownIsActive, setDropdownIsActive] = useState(false);
-  const onClick = () => setDropdownIsActive(!dropdownIsActive);
+  const { theme, setTheme } = useTheme();
 
   return (
     <div className="flex flex-row justify-between items-center w-full p-3 px-8">
@@ -14,7 +14,14 @@ const SmallNavbar = () => {
         className="text-3xl rounded-full font-black font-heading navy">
         <Image src="/assets/hh-logo.png" width={50} height={50} alt="hh-logo" />
       </Link>
-      <NavMenu />
+      <div className="flex flex-row items-center gap-3">
+      <button
+        onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
+      >
+        {theme == 'light' ? <MdDarkMode size={25} className="fill-light-theme-pink" /> : <MdLightMode size={25} className="fill-pale-yellow" />}
+      </button>
+        <NavMenu />
+      </div>
     </div>
   );
 };

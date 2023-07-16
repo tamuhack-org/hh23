@@ -1,3 +1,4 @@
+import { useTheme } from 'next-themes';
 import { Poppins } from 'next/font/google';
 import Link from 'next/link';
 import React from 'react'
@@ -7,9 +8,9 @@ const poppins = Poppins({ weight: ['400', '100', '200', '300', '500', '600', '70
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full border-t-3 border-lighter-blue bg-dark-purple px-4 lg:px-8 py-6 gap-8">
+    <div className="flex flex-col items-center justify-center w-full border-t-3 border-light-blue px-4 lg:px-8 py-6 gap-8 bg-light-theme-yellow text-black dark:bg-dark-purple dark:text-white dark:border-lighter-blue">
       <div className="flex flex-row justify-between items-start w-full gap-6 sm:w-[500px] lg:w-[1000px] xl:w-[1280px]">
-        <div className="flex flex-col item-start justify-center text-white gap-2">
+        <div className="flex flex-col item-start justify-center  gap-2">
           <h1 className="font-bold text-sm lg:text-xl">Sign up for our newsletter!</h1>
           <p className={`${poppins.className} text-xs`}>Stay connected! Sign up for our mailing list for events, updates, and more.</p>
         </div>
@@ -26,7 +27,7 @@ const Footer = () => {
           <input
             type="text"
             name="EMAIL"
-            className="rounded-lg text-xs lg:text-sm p-1 lg:px-2 bg-[rgba(217,217,217,0.09)] border border-white text-white"
+            className="rounded-lg text-xs lg:text-sm p-1 lg:px-2 bg-[rgba(217,217,217,0.09)] border border-black dark:border-white"
             id="mce-EMAIL"
             readOnly
           />
@@ -49,7 +50,7 @@ const Footer = () => {
           </div>
         </form>
       </div>
-      <div className="flex flex-row items-center justify-between text-white w-full sm:w-[500px] lg:w-[1000px] xl:w-[1280px]">
+      <div className="flex flex-row items-center justify-between  w-full sm:w-[500px] lg:w-[1000px] xl:w-[1280px]">
         <h1 className="font-bold text-sm lg:text-xl">HowdyHack 2023</h1>
         <div className="lg:hidden flex flex-row items-center justify-center text-xs gap-2">
           <Link href="https://www.instagram.com/tamuhack" target="_blank" rel="noopener"><FaInstagram size={20} /></Link>
@@ -58,7 +59,7 @@ const Footer = () => {
           <Link href="https://discord.gg/jSTPpy4F" target="_blank" rel="noopener"><FaDiscord size={20} /></Link>
         </div>
       </div>
-      <div className={`hidden ${poppins.className} lg:flex flex-row items-center justify-between w-full sm:w-[500px] lg:w-[1000px] xl:w-[1280px] -mt-6 text-white`}>
+      <div className={`hidden ${poppins.className} lg:flex flex-row items-center justify-between w-full sm:w-[500px] lg:w-[1000px] xl:w-[1280px] -mt-6 `}>
         <p className="text-sm italic">Website brought to you by the TAMUhack Creative + Technology Teams</p>
         <div className="hidden lg:flex flex-row items-center justify-center text-xs gap-2">
           <Link href="https://www.instagram.com/tamuhack" target="_blank" rel="noopener"><FaInstagram size={20} /></Link>
