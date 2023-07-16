@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="flex flex-row justify-between items-start w-full gap-6 sm:w-[500px] lg:w-[1000px]">
         <div className="flex flex-col item-start justify-center text-white gap-2">
           <h1 className="font-bold text-sm lg:text-xl">Sign up for our newsletter!</h1>
-          <p className={`${poppins.className} text-xs lg:text-sm`}>Stay connected! Sign up for our mailing list for events, updates, and more.</p>
+          <p className={`${poppins.className} text-xs`}>Stay connected! Sign up for our mailing list for events, updates, and more.</p>
         </div>
         <form
           action="https://tamuhack.us9.list-manage.com/subscribe/post?u=ba74e26a78411ab40af6384c5&amp;id=2f4969eb6d"
@@ -58,7 +58,7 @@ const Footer = () => {
           <Link href="https://discord.gg/jSTPpy4F" target="_blank" rel="noopener"><FaDiscord size={20} /></Link>
         </div>
       </div>
-      <div className={`hidden ${poppins.className} lg:flex flex-row items-center justify-between w-full sm:w-[500px] lg:w-[1000px] -mt-5 text-white`}>
+      <div className={`hidden ${poppins.className} lg:flex flex-row items-center justify-between w-full sm:w-[500px] lg:w-[1000px] -mt-6 text-white`}>
         <p className="text-sm italic">Website brought to you by the TAMUhack Creative + Technology Teams</p>
         <div className="hidden lg:flex flex-row items-center justify-center text-xs gap-2">
           <Link href="https://www.instagram.com/tamuhack" target="_blank" rel="noopener"><FaInstagram size={20} /></Link>

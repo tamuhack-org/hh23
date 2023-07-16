@@ -47,8 +47,39 @@ export default function Home() {
           </div>
           <Image src="/assets/diner-sign.png" width={400} height={300} alt="diner-sign" className="-mb-8" />
         </div>
-        <div className="lg:flex hidden flex-col h-auto mt-6 w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 lg:pt-0 bg-mountain-stars-small lg:bg-mountain-stars bg-cover border-turquoise border-b-[20px]">
-
+        {/* Desktop landing section */}
+        <div className="lg:flex relative hidden flex-col h-auto mt-6 w-full px-8 items-center justify-center pt-6 pb-6 lg:pb-0 lg:pt-0 bg-mountain-stars-small lg:bg-mountain-stars bg-cover border-turquoise border-b-[20px] 2xl:border-b-[24px]">
+          <div className="flex flex-row justify-center items-center w-full -mb-12 pt-16 -mr-12">
+            <div className="w-1/3" />
+            <div className="flex flex-col items-center gap-5 xl:gap-8 w-2/3">
+              <div className="flex flex-col items-center gap-3 text-pale-yellow font-bold text-xl xl:text-2xl">
+                <h1>
+                  September 9-10, 2023
+                </h1>
+                <h1>
+                  Texas A&M University
+                </h1>
+              </div>
+              <div className="flex flex-row justify-center items-center gap-6 font-extrabold text-sm xl:text-base">
+                <Link href="#" className="py-2 w-52 text-center bg-pale-yellow rounded-lg border-pale-yellow border-2">
+                  APPLY
+                </Link>
+                <Link href="#" className="py-2 w-52 text-center bg-transparent rounded-lg border-pale-yellow border-2 text-pale-yellow">
+                  MENTOR
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-row relative items-end justify-center w-full">
+            <Image src="/assets/diner-sign.png" width={700} height={200} alt="diner" className="z-20 -mr-8" />
+            <div className="flex flex-col justify-stretch z-30 -mx-20">
+              <Image src="/assets/car.png" width={350} height={100} alt="car" />
+            </div>
+            <div className="flex items-center justify-center -mb-4 min-[1120px]:-mb-6 min-[1500px]:-mb-8 -ml-8 mr-12">
+              <Image src="/assets/diner.png" width={1100} height={200} alt="diner" className="z-10" />
+            </div>
+          </div>
+          <div className="absolute h-5 2xl:h-6 bg-light-blue w-full bottom-0" />
         </div>
         <InfoSection />
         <FaqSection />

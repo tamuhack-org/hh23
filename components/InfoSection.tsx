@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 const InfoSection = () => {
   return (
     <>
-      <div id="info" className={`${inter.className} flex flex-col items-center border-t-[12px] lg:border-t-[20px] border-lighter-blue px-8 pt-8 lg:pt-12 bg-white w-full`}>
+      <div id="info" className={`${inter.className} flex flex-col items-center border-t-[12px] lg:border-t-[20px] 2xl:border-t-[24px] border-lighter-blue px-8 pt-8 lg:pt-12 bg-white w-full`}>
         <div className="flex flex-col justify-center items-center w-full xl:w-[1280px]">
           <h1 className={`${zenTokyoZoo.className} text-center text-turquoise text-3xl lg:text-5xl mb-2`}>
             WELCOME IN, AGGIE!
