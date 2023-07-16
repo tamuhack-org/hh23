@@ -93,7 +93,8 @@ export default function Home() {
             <Receipt day="SATURDAY" scheduleItems={saturdayScheduleItems} />
             <Receipt day="SUNDAY" scheduleItems={sundayScheduleItems} />
             <AnchorLink href="#resources">
-              <Image src="/assets/retro-rev.png" width={250} height={200} alt="retro-rev" className="hidden lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
+              <Image src="/assets/retro-rev.png" width={250} height={200} alt="retro-rev" className="hidden opacity-100 lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48 hover:opacity-0" />
+              <Image src="/assets/retro-rev-click.png" width={250} height={200} alt="retro-rev-click" className="hidden lg:flex opacity-0 lg:absolute lg:bottom-16 lg:right-40 xl:right-48 hover:opacity-100" />
             </AnchorLink>
           </div>
         </div>

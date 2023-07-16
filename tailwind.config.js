@@ -62,7 +62,7 @@ module.exports = {
       keyframes: {
         blink: {
           '20%, 24%, 55%': { color: 'transparent', 'text-shadow': 'none' },
-          '0%, 19%, 21%, 23%, 25%, 54%, 56%, 100%': { color: '#FFCC67', 'text-shadow': '0 0 1em rgb(255,204,103,0.5);' },
+          '0%, 19%, 21%, 23%, 25%, 54%, 56%, 100%': { color: '#FFCC67', 'text-shadow': '0 0 0.5em rgb(255,204,103,0.75);' },
         }
       },
     },
