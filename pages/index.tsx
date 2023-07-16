@@ -10,6 +10,7 @@ import FaqSection from '@/components/FaqSection'
 import PrizesSection from '@/components/PrizesSection'
 import ResourcesSection from '@/components/ResourcesSection'
 import Footer from '@/components/Footer'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const archivo = Archivo({ subsets: ['latin'] });
 
@@ -52,7 +53,7 @@ export default function Home() {
           <div className="flex flex-row justify-center items-center w-full -mb-12 pt-16 -mr-12">
             <div className="w-1/3" />
             <div className="flex flex-col items-center gap-5 xl:gap-8 w-2/3">
-              <div className="flex flex-col items-center gap-3 text-pale-yellow font-bold text-xl xl:text-2xl">
+              <div className="flex flex-col items-center gap-3 text-pale-yellow font-bold text-xl xl:text-2xl text-shadow-sm-pale-yellow-glow animate-blink">
                 <h1>
                   September 9-10, 2023
                 </h1>
@@ -60,18 +61,18 @@ export default function Home() {
                   Texas A&M University
                 </h1>
               </div>
-              <div className="flex flex-row justify-center items-center gap-6 font-extrabold text-sm xl:text-base">
-                <Link href="#" className="py-2 w-52 text-center bg-pale-yellow rounded-lg border-pale-yellow border-2">
+              <div className="flex flex-row justify-center items-center gap-6 font-extrabold text-sm xl:text-base z-40">
+                <Link href="#" className="py-2 w-52 text-center bg-pale-yellow rounded-lg border-pale-yellow border-3 text-dark-purple transition duration-200 hover:shadow-pale-yellow-glow">
                   APPLY
                 </Link>
-                <Link href="#" className="py-2 w-52 text-center bg-transparent rounded-lg border-pale-yellow border-2 text-pale-yellow">
+                <Link href="#" className="py-2 w-52 text-center bg-transparent rounded-lg border-pale-yellow border-3 text-pale-yellow transition duration-200 hover:shadow-pale-yellow-glow">
                   MENTOR
                 </Link>
               </div>
             </div>
           </div>
           <div className="flex flex-row relative items-end justify-center w-full">
-            <Image src="/assets/diner-sign.png" width={700} height={200} alt="diner" className="z-20 -mr-8" />
+            <Image src="/assets/diner-sign.png" width={740} height={200} alt="diner" className="z-20 -mr-8" />
             <div className="flex flex-col justify-stretch z-30 -mx-20">
               <Image src="/assets/car.png" width={350} height={100} alt="car" />
             </div>
@@ -91,7 +92,9 @@ export default function Home() {
           <div className="relative flex flex-col lg:flex-row items-center lg:items-start lg:justify-center max-[1206px]:w-full w-[1206px] gap-8">
             <Receipt day="SATURDAY" scheduleItems={saturdayScheduleItems} />
             <Receipt day="SUNDAY" scheduleItems={sundayScheduleItems} />
-            <Image src="/assets/retro-rev.png" width={250} height={200} alt="retro-rev" className="hidden lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
+            <AnchorLink href="#resources">
+              <Image src="/assets/retro-rev.png" width={250} height={200} alt="retro-rev" className="hidden lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
+            </AnchorLink>
           </div>
         </div>
         {/* Schedule to Prizes transition */}

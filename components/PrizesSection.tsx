@@ -1,6 +1,7 @@
 import { prizes } from '@/data/constants';
 import Image from 'next/image';
 import Link from 'next/link';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const PrizesSection = () => {
   return (
@@ -29,49 +30,49 @@ const PrizesSection = () => {
             <div className="flex flex-row justify-end items-center w-1/2 gap-2">
               <Image src="/assets/light-gray-circle.svg" width={20} height={20} alt="mint-green-circle" />
               <Image src="/assets/light-gray-circle.svg" width={20} height={20} alt="mint-green-circle" />
-              <Link href="#">
+              <AnchorLink href="#">
                 <Image src="/assets/hacker-queue.png" width={100} height={20} alt="hacker-queue" />
-              </Link>
+              </AnchorLink>
             </div>
           </div>
         </div>
         {/* Desktop */}
-        <div className="hidden lg:flex flex-col w-full justify-center items-center gap-6">
+        <div className="hidden lg:flex flex-col w-full justify-center items-center gap-10">
           <div className="flex flex-row justify-center items-center w-full gap-8 mt-8">
             <Image src="/assets/mint-green-arrow.svg" width={50} height={50} alt="mint-green-arrow" className="scale-[-1]" />
             <div className="flex flex-row justify-start items-center w-full rounded-3xl border-mint-green border-4 bg-white p-5 gap-6">
               <Image src="/assets/mint-green-circle.svg" width={48} height={12} alt="mint-green-circle" />
               <div className="flex flex-col w-full gap-2">
-                <h1 className="font-bold text-xl">{prizes[0].title}</h1>
-                <p className="text-base">{prizes[0].description}</p>
-                <h2 className="font-bold text-base">{prizes[0].prize}</h2>
+                <h1 className="font-bold text-2xl">{prizes[0].title}</h1>
+                <p className="text-lg">{prizes[0].description}</p>
+                <h2 className="font-bold text-lg mt-2">{prizes[0].prize}</h2>
               </div>
             </div>
             <Image src="/assets/mint-green-arrow.svg" width={50} height={50} alt="lime-green-arrow" />
           </div>
-          <div className="flex flex-row w-full items-stretch justify-center gap-6">
+          <div className="flex flex-row w-full items-stretch justify-center gap-10">
             <div className="flex flex-col w-1/2 rounded-3xl border-mint-green border-4 bg-white p-5">
               <div className="flex flex-col w-full gap-2">
-                <h1 className="font-bold text-xl">{prizes[1].title}</h1>
-                <p className="text-base">{prizes[1].description}</p>
-                <h2 className="font-bold text-base">{prizes[1].prize}</h2>
+                <h1 className="font-bold text-2xl">{prizes[1].title}</h1>
+                <p className="text-lg">{prizes[1].description}</p>
+                <h2 className="font-bold text-lg mt-2">{prizes[1].prize}</h2>
               </div>
             </div>
             <div className="flex flex-col w-1/2 rounded-3xl border-mint-green border-4 bg-white p-5">
               <div className="flex flex-col w-full gap-2">
-                <h1 className="font-bold text-xl">{prizes[2].title}</h1>
-                <p className="text-base">{prizes[2].description}</p>
-                <h2 className="font-bold text-base">{prizes[2].prize}</h2>
+                <h1 className="font-bold text-2xl">{prizes[2].title}</h1>
+                <p className="text-lg">{prizes[2].description}</p>
+                <h2 className="font-bold text-lg mt-2">{prizes[2].prize}</h2>
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center gap-6 w-full">
+          <div className="flex flex-col items-center justify-center gap-10 w-full">
             {prizes.filter((_, i) => i >= 3).map((prize, i) =>
               <div className="flex flex-row justify-center items-center w-full gap-4" key={i}>
                 <div className="flex flex-col rounded-3xl w-full bg-white border-4 border-mint-green p-5 gap-2">
-                  <h1 className="font-bold text-xl">{prize.title}</h1>
-                  <p className="text-base">{prize.description}</p>
-                  <h2 className="font-bold text-base">{prize.prize}</h2>
+                  <h1 className="font-bold text-2xl">{prize.title}</h1>
+                  <p className="text-lg">{prize.description}</p>
+                  <h2 className="font-bold text-lg mt-2">{prize.prize}</h2>
                 </div>
               </div>
             )}
@@ -81,9 +82,9 @@ const PrizesSection = () => {
             <div className="flex flex-row justify-end items-center w-1/2 gap-8">
               <Image src="/assets/light-gray-circle.svg" width={48} height={20} alt="mint-green-circle" />
               <Image src="/assets/light-gray-circle.svg" width={48} height={20} alt="mint-green-circle" />
-              <Link href="#">
+              <AnchorLink href="#" className="hover:scale-110 transition duration-200">
                 <Image src="/assets/hacker-queue.png" width={140} height={20} alt="hacker-queue" />
-              </Link>
+              </AnchorLink>
             </div>
           </div>
         </div>

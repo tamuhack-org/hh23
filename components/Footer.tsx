@@ -8,7 +8,7 @@ const poppins = Poppins({ weight: ['400', '100', '200', '300', '500', '600', '70
 const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full border-t-3 border-lighter-blue bg-dark-purple px-4 lg:px-8 py-6 gap-8">
-      <div className="flex flex-row justify-between items-start w-full gap-6 sm:w-[500px] lg:w-[1000px]">
+      <div className="flex flex-row justify-between items-start w-full gap-6 sm:w-[500px] lg:w-[1000px] xl:w-[1280px]">
         <div className="flex flex-col item-start justify-center text-white gap-2">
           <h1 className="font-bold text-sm lg:text-xl">Sign up for our newsletter!</h1>
           <p className={`${poppins.className} text-xs`}>Stay connected! Sign up for our mailing list for events, updates, and more.</p>
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
         </form>
       </div>
-      <div className="flex flex-row items-center justify-between text-white w-full sm:w-[500px] lg:w-[1000px]">
+      <div className="flex flex-row items-center justify-between text-white w-full sm:w-[500px] lg:w-[1000px] xl:w-[1280px]">
         <h1 className="font-bold text-sm lg:text-xl">HowdyHack 2023</h1>
         <div className="lg:hidden flex flex-row items-center justify-center text-xs gap-2">
           <Link href="https://www.instagram.com/tamuhack" target="_blank" rel="noopener"><FaInstagram size={20} /></Link>
@@ -58,7 +58,7 @@ const Footer = () => {
           <Link href="https://discord.gg/jSTPpy4F" target="_blank" rel="noopener"><FaDiscord size={20} /></Link>
         </div>
       </div>
-      <div className={`hidden ${poppins.className} lg:flex flex-row items-center justify-between w-full sm:w-[500px] lg:w-[1000px] -mt-6 text-white`}>
+      <div className={`hidden ${poppins.className} lg:flex flex-row items-center justify-between w-full sm:w-[500px] lg:w-[1000px] xl:w-[1280px] -mt-6 text-white`}>
         <p className="text-sm italic">Website brought to you by the TAMUhack Creative + Technology Teams</p>
         <div className="hidden lg:flex flex-row items-center justify-center text-xs gap-2">
           <Link href="https://www.instagram.com/tamuhack" target="_blank" rel="noopener"><FaInstagram size={20} /></Link>
