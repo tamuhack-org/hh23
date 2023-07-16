@@ -11,7 +11,7 @@ import PrizesSection from '@/components/PrizesSection'
 import ResourcesSection from '@/components/ResourcesSection'
 import Footer from '@/components/Footer'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useTheme } from 'next-themes'
 
 const archivo = Archivo({ subsets: ['latin'] });
@@ -22,10 +22,6 @@ export default function Home() {
   const onMouseLeave = () => setIsRevHovered(false);
 
   const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    console.log(theme);
-  }, [theme])
 
   return (
     <main
