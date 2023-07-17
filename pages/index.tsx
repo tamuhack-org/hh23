@@ -11,17 +11,24 @@ import PrizesSection from '@/components/PrizesSection'
 import ResourcesSection from '@/components/ResourcesSection'
 import Footer from '@/components/Footer'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
 const archivo = Archivo({ subsets: ['latin'] });
 
 export default function Home() {
   const [isRevHovered, setIsRevHovered] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const onMouseEnter = () => setIsRevHovered(true);
   const onMouseLeave = () => setIsRevHovered(false);
 
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <main
