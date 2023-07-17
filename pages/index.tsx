@@ -54,7 +54,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <Image src="/assets/diner-sign.png" width={400} height={300} alt="diner-sign" className="-mb-8" />
+          <Image src="/assets/diner-sign.png" width={400} height={300} alt="diner-sign" className="-mb-8 glow" />
         </div>
         {/* Desktop landing section */}
         <div className="lg:flex relative hidden flex-col h-auto mt-6 w-full px-8 items-center justify-center pt-6 pb-6 lg:pb-0 lg:pt-0 dark:bg-mountain-stars bg-light-mountain-stars bg-cover border-turquoise border-b-[20px] 2xl:border-b-[24px]">
@@ -70,7 +70,7 @@ export default function Home() {
                 </h1>
               </div>
               <div className="flex flex-row justify-center items-center gap-6 font-extrabold text-sm xl:text-base z-40">
-                <Link href="#" className="py-2 w-52 text-center rounded-lg  border-3 transition duration-200 bg-light-theme-pink border-light-theme-pink text-light-theme-yellow hover:shadow-light-theme-pink-glow dark:bg-pale-yellow dark:border-pale-yellow dark:text-dark-purple dark:hover:shadow-pale-yellow-glow">
+                <Link href="#" className="py-2 w-52 text-center rounded-lg border-3 transition duration-200 bg-light-theme-pink border-light-theme-pink text-light-theme-yellow hover:shadow-light-theme-pink-glow dark:bg-pale-yellow dark:border-pale-yellow dark:text-dark-purple dark:hover:shadow-pale-yellow-glow">
                   APPLY
                 </Link>
                 <Link href="#" className="py-2 w-52 text-center bg-transparent rounded-lg border-3 transition duration-200 border-light-theme-pink text-light-theme-pink hover:shadow-light-theme-pink-glow dark:border-pale-yellow dark:text-pale-yellow dark:hover:shadow-pale-yellow-glow">
@@ -81,13 +81,13 @@ export default function Home() {
           </div>
           <div className="flex flex-row relative items-end justify-center w-full">
             <div className="flex items-center justify-center -mb-4 -mr-12">
-              <Image src="/assets/diner-sign.png" width={740} height={200} alt="diner" className="z-20" />
+              <Image src="/assets/diner-sign.png" width={740} height={200} alt="diner" className="z-20 glow" />
             </div>
             <div className="flex flex-col justify-stretch z-30 -mx-20">
-              <Image src="/assets/car.png" width={350} height={100} alt="car" onClick={theme === 'dark' ? () => setTheme('light') : () => setTheme('dark')} className="cursor-pointer" />
+              <Image src="/assets/car.png" width={350} height={100} alt="car" onClick={theme === 'dark' ? () => setTheme('light') : () => setTheme('dark')} className="cursor-pointer drop-shadow-pale-yellow-glow" />
             </div>
             <div className="flex items-center justify-center -mb-4 min-[1120px]:-mb-6 min-[1500px]:-mb-8 -ml-8 mr-12">
-              <Image src="/assets/diner.png" width={1100} height={200} alt="diner" className="z-10" />
+              <Image src="/assets/diner.png" width={1100} height={200} alt="diner" className="z-10 glow" />
             </div>
           </div>
           <div className="absolute h-5 2xl:h-6 bg-light-blue w-full bottom-0" />

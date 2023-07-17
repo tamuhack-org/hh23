@@ -6,9 +6,8 @@ const Navbar = () => {
   return (
     <div className="hidden lg:flex items-center justify-between px-8 xl:px-24 py-4 w-full z-50 text-light-theme-pink bg-light-theme-yellow dark:text-pale-yellow dark:bg-dark-purple">
       <div className="w-1/3">
-        <AnchorLink href="/"
-          className="text-3xl rounded-full font-black font-heading navy">
-          <Image src="/assets/hh-logo.png" width={50} height={50} alt="hh-logo" />
+        <AnchorLink href="/">
+          <Image src="/assets/hh-logo.png" width={50} height={50} alt="hh-logo" className="drop-shadow-2xl" />
         </AnchorLink>
       </div>
       <div className="flex justify-center items-center gap-6 w-1/3 font-bold text-lg">

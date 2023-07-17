@@ -42,7 +42,7 @@ const InfoSection = () => {
         </div>
       </div>
       {/* Diner booth */}
-      <div className="flex flex-col items-center justify-center bg-white -mb-4 pt-4 lg:pt-12">
+      <div className="flex flex-col items-center justify-center bg-white -mb-7 pt-4 lg:pt-12">
         <div className="flex flex-row items-center justify-center lg:gap-12">
           <Image src="/assets/diner-booth.png" width={200} height={200} alt="diner-booth" className="hidden lg:flex z-10" />
           <Image src="/assets/diner-booth.png" width={200} height={200} alt="diner-booth" className="z-10" />
