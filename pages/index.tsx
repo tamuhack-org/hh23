@@ -27,7 +27,7 @@ export default function Home() {
     <main
       className={`${archivo.className}`}
     >
-      <div className="bg-light-theme-yellow dark:bg-dark-purple dark:text-black">
+      <div className="bg-light-theme-yellow bg-gradient-to-t from-[rgb(255,22,22,0.5)] to-light-theme-yellow dark:bg-dark-purple dark:from-transparent dark:to-transparent dark:text-black">
         {/* Navbar */}
         <Navbar />
         {/* Small Navbar */}
@@ -35,7 +35,7 @@ export default function Home() {
           <SmallNavbar />
         </div>
         {/* Mobile and tablet landing section */}
-        <div className="lg:hidden flex flex-col h-auto mt-6 lg:h-screen w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 lg:pt-0 bg-light-mountain-stars dark:bg-mountain-stars-small bg-cover border-turquoise border-b-[12px]">
+        <div className="lg:hidden relative flex flex-col h-auto mt-6 lg:h-screen w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 lg:pt-0 bg-light-mountain-stars dark:bg-mountain-stars-small bg-cover">
           <div className="flex flex-col items-center w-full gap-4">
             <div className="flex flex-col items-center w-full gap-2 text-shadow-sm-pale-yellow-glow animate-blink-pink dark:animate-blink-yellow font-bold text-xl">
               <h1>
@@ -54,10 +54,11 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <Image src="/assets/diner-sign.png" width={400} height={300} alt="diner-sign" className="-mb-8 glow" />
+          <Image src="/assets/diner-sign.png" width={400} height={300} alt="diner-sign" className="-mb-5 glow" />
+          <div className="absolute h-3 bg-turquoise w-full bottom-0 z-20" />
         </div>
         {/* Desktop landing section */}
-        <div className="lg:flex relative hidden flex-col h-auto mt-6 w-full px-8 items-center justify-center pt-6 pb-6 lg:pb-0 lg:pt-0 dark:bg-mountain-stars bg-light-mountain-stars bg-cover border-turquoise border-b-[20px] 2xl:border-b-[24px]">
+        <div className="lg:flex relative hidden flex-col h-auto mt-6 w-full px-8 items-center justify-center pt-6 pb-6 lg:pb-0 lg:pt-0 dark:bg-mountain-stars bg-light-mountain-stars bg-cover">
           <div className="flex flex-row justify-center items-center w-full -mb-12 pt-16 -mr-12">
             <div className="w-1/3" />
             <div className="flex flex-col items-center gap-5 xl:gap-8 w-2/3">
@@ -80,17 +81,18 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-row relative items-end justify-center w-full">
-            <div className="flex items-center justify-center -mb-4 -mr-12">
-              <Image src="/assets/diner-sign.png" width={740} height={200} alt="diner" className="z-20 glow" />
+            <div className="flex items-center justify-center -mr-12">
+              <Image src="/assets/diner-sign.png" width={740} height={200} alt="diner" className="z-10 glow" />
             </div>
-            <div className="flex flex-col justify-stretch z-30 -mx-20">
+            <div className="flex flex-col justify-stretch z-40 -mx-20">
               <Image src="/assets/car.png" width={350} height={100} alt="car" onClick={theme === 'dark' ? () => setTheme('light') : () => setTheme('dark')} className="cursor-pointer drop-shadow-pale-yellow-glow" />
             </div>
             <div className="flex items-center justify-center -mb-4 min-[1120px]:-mb-6 min-[1500px]:-mb-8 -ml-8 mr-12">
-              <Image src="/assets/diner.png" width={1100} height={200} alt="diner" className="z-10 glow" />
+              <Image src="/assets/diner.png" width={1100} height={200} alt="diner" className="z-30 glow" />
             </div>
           </div>
-          <div className="absolute h-5 2xl:h-6 bg-light-blue w-full bottom-0" />
+          <div className="absolute h-5 2xl:h-6 bg-light-blue w-full bottom-5 2xl:bottom-6" />
+          <div className="absolute h-5 2xl:h-6 bg-turquoise w-full bottom-0 z-20" />
         </div>
         <InfoSection />
         <FaqSection />
