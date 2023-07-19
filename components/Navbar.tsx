@@ -5,12 +5,12 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 const Navbar = () => {
   return (
     <div className="hidden lg:flex items-center justify-between px-8 xl:px-24 py-4 w-full z-50 text-light-theme-pink bg-light-theme-yellow dark:text-pale-yellow dark:bg-dark-purple">
-      <div className="w-1/3">
-        <AnchorLink href="/">
-          <Image src="/assets/hh-logo.png" width={50} height={50} alt="hh-logo" className="drop-shadow-2xl" />
+      <div>
+        <AnchorLink href="/" className="max-w-fit">
+          <Image src="/assets/hh-logo.png" width={50} height={50} alt="hh-logo" />
         </AnchorLink>
       </div>
-      <div className="flex justify-center items-center gap-6 w-1/3 font-bold text-lg">
+      <div className="flex justify-center items-center gap-6 font-bold text-lg">
         <AnchorLink href="#info" className="hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow py-1 px-2 rounded-md transition-text-shadow duration-200">
           Info
         </AnchorLink>
@@ -27,7 +27,7 @@ const Navbar = () => {
           Resources
         </AnchorLink>
       </div>
-      <div className="w-1/3 flex justify-end items-center">
+      <div className="flex justify-end items-center">
         <Link href="https://tamuhack.org" target="_blank" rel="noopener" className="xl:flex text-4xl font-bold mr-8 transition-text-shadow duration-200 hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow">
           th
         </Link>

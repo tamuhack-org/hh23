@@ -1,7 +1,6 @@
 import { prizes } from '@/data/constants';
 import Image from 'next/image';
 import Link from 'next/link';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const PrizesSection = () => {
   return (
@@ -30,9 +29,9 @@ const PrizesSection = () => {
             <div className="flex flex-row justify-end items-center w-1/2 gap-2">
               <Image src="/assets/light-gray-circle.svg" width={20} height={20} alt="mint-green-circle" />
               <Image src="/assets/light-gray-circle.svg" width={20} height={20} alt="mint-green-circle" />
-              <AnchorLink href="#">
+              <Link href="#">
                 <Image src="/assets/hacker-queue.png" width={100} height={20} alt="hacker-queue" />
-              </AnchorLink>
+              </Link>
             </div>
           </div>
         </div>
@@ -82,9 +81,9 @@ const PrizesSection = () => {
             <div className="flex flex-row justify-end items-center w-1/2 gap-8">
               <Image src="/assets/light-gray-circle.svg" width={48} height={20} alt="mint-green-circle" />
               <Image src="/assets/light-gray-circle.svg" width={48} height={20} alt="mint-green-circle" />
-              <AnchorLink href="#" className="hover:scale-110 transition duration-200">
+              <Link href="#" className="hover:scale-110 transition duration-200">
                 <Image src="/assets/hacker-queue.png" width={140} height={20} alt="hacker-queue" />
-              </AnchorLink>
+              </Link>
             </div>
           </div>
         </div>
