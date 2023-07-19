@@ -94,12 +94,12 @@ export default function Home() {
             <div className="flex flex-col justify-stretch z-40 -mx-20">
               <Image src="/assets/car.png" width={350} height={100} alt="car" onClick={theme === 'dark' ? () => setTheme('light') : () => setTheme('dark')} className="cursor-pointer drop-shadow-pale-yellow-glow" />
             </div>
-            <div className="flex items-center justify-center -mb-4 min-[1120px]:-mb-6 min-[1500px]:-mb-8 -ml-8 mr-12">
+            <div className="flex items-center justify-center -mb-2 min-[1120px]:-mb-4 min-[1500px]:-mb-5 -ml-8 mr-12">
               <Image src="/assets/diner.png" width={1100} height={200} alt="diner" className="z-30 glow" />
             </div>
           </div>
-          <div className="absolute h-5 2xl:h-6 bg-light-blue w-full bottom-5 2xl:bottom-6" />
-          <div className="absolute h-5 2xl:h-6 bg-turquoise w-full bottom-0 z-20" />
+          <div className="absolute h-5 2xl:h-8 bg-light-blue w-full bottom-5 2xl:bottom-8" />
+          <div className="absolute h-5 2xl:h-8 bg-turquoise w-full bottom-0 z-20" />
         </div>
         <InfoSection />
         <FaqSection />

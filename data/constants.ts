@@ -201,16 +201,26 @@ export const resources = [
   {
     name: 'HelpR',
     link: 'https://helpr.vercel.app',
-    description: 'Description of resource',
+    description: 'HelpR matches hackers with mentors. Submit a help ticket with your question or problem, and get assistance from a mentor. HelpR helps you hack better and faster!',
   },
   {
-    name: 'HelpR',
+    name: 'Devpost',
     link: 'https://helpr.vercel.app',
-    description: 'Description of resource',
+    description: 'Devpost is where you submit your projects. It also shows the rules, prizes, sponsors, and judges. Showcase your work and compete with other hackers!',
   },
   {
-    name: 'HelpR',
+    name: 'Spotify Queue',
     link: 'https://helpr.vercel.app',
-    description: 'Description of resource',
+    description: 'Want to listen to some tunes while hacking? Join our Spotify Queue and add your favorite songs to the playlist.',
+  },
+  {
+    name: 'Hacker Guide',
+    link: 'https://helpr.vercel.app',
+    description: 'Check out our hacker guide, where you can find the best resources for your project. Our hacker guide resource is your one-stop shop for hackathon success!',
+  },
+  {
+    name: 'Code of Conduct',
+    link: 'https://helpr.vercel.app',
+    description: 'The MLH Code of Conduct sets the rules and expectations for hackathon participants, organizers, and others. It aims to create a safe and welcoming environment for everyone.',
   },
 ];

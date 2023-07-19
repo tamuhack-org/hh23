@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 const InfoSection = () => {
   return (
     <>
-      <div id="info" className={`${inter.className} flex flex-col items-center border-t-[12px] lg:border-t-[20px] 2xl:border-t-[24px] border-lighter-blue px-8 pt-8 lg:pt-12 bg-white w-full`}>
+      <div id="info" className={`${inter.className} flex flex-col items-center border-t-[12px] lg:border-t-[20px] 2xl:border-t-[32px] border-lighter-blue px-8 pt-8 lg:pt-12 bg-white w-full z-50`}>
         <div className="flex flex-col justify-center items-center w-full xl:w-[1280px]">
           <h1 className={`${zenTokyoZoo.className} text-center text-turquoise text-3xl lg:text-5xl mb-2`}>
             WELCOME IN, AGGIES!
@@ -42,7 +42,7 @@ const InfoSection = () => {
         </div>
       </div>
       {/* Diner booth */}
-      <div className="flex flex-col items-center justify-center bg-white -mb-7 pt-4 lg:pt-12">
+      <div className="flex flex-col items-center justify-center bg-white -mb-6 pt-4 lg:pt-12">
         <div className="flex flex-row items-center justify-center lg:gap-12">
           <Image src="/assets/diner-booth.png" width={200} height={200} alt="diner-booth" className="hidden lg:flex z-10" />
           <Image src="/assets/diner-booth.png" width={200} height={200} alt="diner-booth" className="z-10" />

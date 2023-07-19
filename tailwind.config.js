@@ -56,6 +56,8 @@ export const theme = {
     textShadow: {
       'pale-yellow-glow': '0 0 1em rgb(255,204,103,0.5);',
       'light-theme-pink-glow': '0 0 1em rgb(255,57,119,0.5);',
+      'white-glow': '0 0 1em rgb(255,255,255,0.5);',
+      'prizes-light-gray-glow': '0 0 1em rgb(121,112,103,0.5);',
       'sm-pale-yellow-glow': '0 0 0.5em rgb(255,204,103,0.5);',
     },
     transitionProperty: {
