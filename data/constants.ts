@@ -27,10 +27,6 @@ export const faqMenuItems = [
     question: 'Will there be workshops or talks?',
     answer: 'Of course! We will have workshops running throughout the whole event. We will release the complete schedule on the website closer to the event.',
   },
-  {
-    question: 'Have additional questions?',
-    answer: 'Email us with any questions, comments, concerns at hello@tamuhack.com.',
-  },
 ];
 
 export const saturdayScheduleItems = [
@@ -166,17 +162,17 @@ export const sundayScheduleItems = [
 
 export const prizes = [
   {
-    title: 'First Place Prize',
+    title: 'First Overall',
     description: 'This prize will be awarded to the best overall project submission',
     prize: 'BenQ MOBIUZ 24" Gaming Monitor',
   },
   {
-    title: 'Second Place Prize',
+    title: 'Second Overall',
     description: 'This prize will be awarded to the second place project submission',
     prize: 'Mini LED Projector',
   },
   {
-    title: 'Third Place Prize',
+    title: 'Third Overall',
     description: 'This prize will be awarded to the third place project submission',
     prize: 'Amazon Echo Dot + Smart Bulb',
   },
@@ -218,9 +214,34 @@ export const resources = [
     link: 'https://helpr.vercel.app',
     description: 'Check out our hacker guide, where you can find the best resources for your project. Our hacker guide resource is your one-stop shop for hackathon success!',
   },
+];
+
+export const socials = [
   {
-    name: 'Code of Conduct',
-    link: 'https://helpr.vercel.app',
-    description: 'The MLH Code of Conduct sets the rules and expectations for hackathon participants, organizers, and others. It aims to create a safe and welcoming environment for everyone.',
+    name: 'Instagram',
+    link: 'https://www.instagram.com/tamuhack',
+  },
+  {
+    name: 'TikTok',
+    link: 'https://www.tiktok.com/@tamuhack',
+  },
+  {
+    name: 'LinkedIn',
+    link: 'https://www.linkedin.com/company/tamuhack',
+  },
+  {
+    name: 'Discord',
+    link: 'https://discord.gg/jSTPpy4F',
+  },
+];
+
+export const workshops = [
+  {
+    name: 'Web Dev',
+    link: 'https://tamuhack.com/web-workshop',
+  },
+  {
+    name: 'Intro to Git',
+    link: 'https://tamuhack.com/git',
   },
 ];

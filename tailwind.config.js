@@ -49,6 +49,7 @@ export const theme = {
     boxShadow: {
       'pale-yellow-glow': '0 0 1em rgba(255,204,103,0.5);',
       'light-theme-pink-glow': '0 0 1em rgba(255,57,119,0.5);',
+      'resources-pink-glow': '0 0 1em rgba(255,80,129,0.5);',
       'mint-green-glow': '0 0 1.5em rgba(146,206,171,0.5);',
     },
     dropShadow: {

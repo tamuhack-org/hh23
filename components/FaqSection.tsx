@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import { faqMenuItems } from '@/data/constants';
 import FaqMenuItem from './FaqMenuItem';
+import { Archivo_Narrow } from 'next/font/google';
+import Link from 'next/link';
+
+const archivoNarrow = Archivo_Narrow({ subsets: ['latin'] });
 
 const FaqSection = () => {
   return (
@@ -29,6 +33,19 @@ const FaqSection = () => {
               {faqMenuItems.map((faqMenuItem, i) =>
                 <FaqMenuItem question={faqMenuItem.question} answer={faqMenuItem.answer} key={i} />
               )}
+              <div className="flex flex-col justify-center items-start border-b-4 border-dashed border-black w-full gap-2 lg:pb-3 lg:pt-4">
+                <div className={`${archivoNarrow.className} flex flex-row justify-between items-center font-semibold text-base lg:text-2xl w-full`}>
+                  <h1 className="text-pale-pink">
+                    Have additional questions?
+                  </h1>
+                  <h1 className="text-[rgb(0,0,0,0.4)] lg:text-2xl">
+                    $ {(Math.random() * (20 - 5) + 5).toFixed(2)}
+                  </h1>
+                </div>
+                <div className="text-xs lg:text-lg pb-2">
+                  Email us with any questions, comments, concerns at <Link href="mailto:hello@tamuhack.com" className="underline hover:opacity-75 transition duration-200">hello@tamuhack.com</Link>.
+                </div>
+              </div>
               <div className="flex flex-row items-center w-full justify-center pt-4 lg:hidden">
                 <Image src="/assets/pie.png" width={75} height={100} alt="pie" />
                 <Image src="/assets/pie.png" width={75} height={100} alt="pie" />

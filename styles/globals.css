@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.theme-toggle-dark {
+  filter: drop-shadow(0 0 1em rgba(255, 204, 103, 0.5));
+}
+
+.theme-toggle-dark {
+  filter: drop-shadow(0 0 1em rgba(255, 57, 119, 0.5));
+}
+
 .glow {
   animation: blink 12s infinite;
 }

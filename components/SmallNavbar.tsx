@@ -10,16 +10,13 @@ const SmallNavbar = () => {
 
   return (
     <div className="flex flex-row justify-between items-center w-full p-3 px-8">
-      <Link href="/"
-        className="text-3xl rounded-full font-black font-heading navy">
-        <Image src="/assets/hh-logo.png" width={50} height={50} alt="hh-logo" />
-      </Link>
+      <Image src="/assets/hh-logo.png" width={50} height={50} alt="hh-logo" priority />
       <div className="flex flex-row items-center gap-3">
-      <button
-        onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
-      >
-        {theme == 'light' ? <MdDarkMode size={25} className="fill-light-theme-pink" /> : <MdLightMode size={25} className="fill-pale-yellow" />}
-      </button>
+        <button
+          onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
+        >
+          {theme == 'light' ? <MdDarkMode size={25} className="fill-light-theme-pink" /> : <MdLightMode size={25} className="fill-pale-yellow" />}
+        </button>
         <NavMenu />
       </div>
     </div>

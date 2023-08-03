@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>HH 2023</title>
       </Head>
-      <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark">
+      <ThemeProvider attribute="class" enableSystem={false} defaultTheme={new Date().getHours() >= 18 || new Date().getHours() <= 6 ? 'dark' : 'light'}>
         <Component {...pageProps} />
       </ThemeProvider>
     </>
