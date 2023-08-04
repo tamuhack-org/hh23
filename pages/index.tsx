@@ -47,7 +47,6 @@ export default function Home() {
 
   return (
     <main
-<<<<<<< HEAD
       className={`${archivo.className}`}
     >
       <div className="bg-light-theme-yellow bg-gradient-to-t from-[rgb(255,22,22,0.5)] to-light-theme-yellow dark:bg-dark-purple dark:from-transparent dark:to-transparent dark:text-black">
@@ -168,11 +167,5 @@ export default function Home() {
         <Footer />
       </div>
     </main >
-=======
-      className={`flex min-h-screen flex-col items-center justify-center text-3xl text-pale-yellow font-bold ${archivo.className} bg-dark-purple`}
-    >
-      Website under maintenance...
-    </main>
->>>>>>> main
   )
 };
