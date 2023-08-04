@@ -27,8 +27,8 @@ const ResourceItem = ({ name, link, description }: ResourceItemProps) => {
     // </Link>
 
     // COMMENT WHEN EVENT STARTS
-    
-    <div className="flex flex-row w-full justify-start items-center bg-[rgb(113,113,113)] rounded-2xl p-1 lg:p-3 cursor-not-allowed opacity-75">
+
+    <div className="flex flex-row w-full justify-start items-center bg-resources-pink rounded-2xl p-1 lg:p-3 cursor-not-allowed opacity-50">
       <div className="flex flex-col lg:flex-row w-full justify-start items-center rounded-xl border-2 lg:border-4 border-white p-4 lg:p-6 gap-2">
         <div className="flex flex-row justify-between items-center w-full lg:w-1/3 gap-2 lg:gap-4">
           <h1 className="font-black text-white text-base lg:text-2xl rounded-md">

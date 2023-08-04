@@ -53,13 +53,22 @@ const Footer = () => {
           <p className="font-medium text-xl mb-8">Website brought to you by the TAMUhack Creative + Technology Teams</p>
         </div>
         <div className="flex flex-wrap justify-start lg:justify-end flex-grow gap-12">
-          <div>
+          {/* <div>
             <p className="text-base mb-2">Hacker Resources</p>
             <div className="flex flex-col gap-1 mb-2">
               {resources.map((resource) =>
                 <Link href={resource.link} target="_blank" rel="noreferrer noopener" className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200" key={resource.name}>
                   {resource.name}
                 </Link>)}
+            </div>
+          </div> */}
+          <div className="opacity-50 cursor-not-allowed">
+            <p className="text-base mb-2 cursor-not-allowed">Hacker Resources</p>
+            <div className="flex flex-col gap-1 mb-2">
+              {resources.map((resource) =>
+                <label className="font-semibold text-lg cursor-not-allowed" key={resource.name}>
+                  {resource.name}
+                </label>)}
             </div>
           </div>
           <div>
