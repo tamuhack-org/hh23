@@ -106,15 +106,15 @@ export default function Home() {
           </div>
           <div className="flex flex-row relative items-end justify-center w-full" >
             <motion.div className="flex items-center justify-center -mr-12 z-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
-              <Image src="/assets/diner-sign.png" width={740} height={200} alt="diner" className="z-10 glow" priority loading="eager" />
+              <Image src="/assets/diner-sign.png" width={740} height={200} alt="diner" className="z-10 glow" priority />
             </motion.div>
             <motion.div className="flex flex-col justify-stretch z-40 -mx-20 cursor-ew-resize" initial={{ x: "-100vw" }} animate={{ x: 0 }} transition={{ duration: 1, delay: 2 }}>
               <Draggable axis="x" bounds={{ left: 0, top: 0, right: 100, bottom: 0 }} onDrag={handleDrag}>
-                <Image src="/assets/car.png" width={350} height={100} alt="car" draggable="false" priority loading="eager" />
+                <Image src="/assets/car.png" width={350} height={100} alt="car" draggable="false" priority />
               </Draggable>
             </motion.div>
             <motion.div className="flex items-center justify-center -mb-2 min-[1120px]:-mb-4 min-[1500px]:-mb-5 -ml-8 mr-12 z-30" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
-              <Image src="/assets/diner.png" width={1100} height={200} alt="diner" className="z-30 glow" priority loading="eager" />
+              <Image src="/assets/diner.png" width={1100} height={200} alt="diner" className="z-30 glow" priority />
             </motion.div>
           </div>
           <div className="absolute h-5 2xl:h-8 bg-light-blue w-full bottom-5 2xl:bottom-8" />
