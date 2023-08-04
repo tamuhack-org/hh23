@@ -57,7 +57,7 @@ const Footer = () => {
             <p className="text-base mb-2">Hacker Resources</p>
             <div className="flex flex-col gap-1 mb-2">
               {resources.map((resource) =>
-                <Link href={resource.link} target="_blank" rel="noreferrer noopener" className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200">
+                <Link href={resource.link} target="_blank" rel="noreferrer noopener" className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200" key={resource.name}>
                   {resource.name}
                 </Link>)}
             </div>
@@ -66,7 +66,7 @@ const Footer = () => {
             <p className="text-base mb-2">Socials</p>
             <div className="flex flex-col gap-1 mb-2">
               {socials.map(social =>
-                <Link href={social.link} target="_blank" rel="noreferrer noopener" className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200">
+                <Link href={social.link} target="_blank" rel="noreferrer noopener" className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200" key={social.name}>
                   {social.name}
                 </Link>)}
             </div>
@@ -75,7 +75,7 @@ const Footer = () => {
             <p className="text-base mb-2">Workshops</p>
             <div className="flex flex-col gap-1 mb-2">
               {workshops.map(workshop =>
-                <Link href={workshop.link} target="_blank" rel="noreferrer noopener" className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200">
+                <Link href={workshop.link} target="_blank" rel="noreferrer noopener" className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200" key={workshop.name}>
                   {workshop.name}
                 </Link>)}
             </div>
