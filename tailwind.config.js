@@ -51,6 +51,7 @@ export const theme = {
       'light-theme-pink-glow': '0 0 1em rgba(255,57,119,0.5);',
       'resources-pink-glow': '0 0 1em rgba(255,80,129,0.5);',
       'mint-green-glow': '0 0 1.5em rgba(146,206,171,0.5);',
+      'prizes-pink-glow': '0 0 1.5em rgb(246,73,116,0.5);',
     },
     dropShadow: {
       'pale-yellow-glow': '0 0 10em rgba(255,204,103,1);',

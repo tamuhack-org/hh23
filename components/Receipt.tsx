@@ -16,9 +16,9 @@ interface ReceiptProps {
 
 const Receipt = ({ day, scheduleItems }: ReceiptProps) => {
   return (
-    <div className={`${spaceMono.className} flex flex-col items-center justify-center bg-receipt bg-cover max-[571px]:w-full w-[571px] overflow-clip p-6 lg:p-10 gap-4`}>
-      <h1 className={`${archivo.className} font-bold text-xl lg:text-3xl lg:mb-4`}>{day}</h1>
-      <div className="w-4/5 border-y-2 border-black h-6 mb-4" />
+    <div className={`${spaceMono.className} flex flex-col items-center justify-center bg-receipt bg-cover max-[571px]:w-full w-[550px] overflow-clip p-8 lg:p-10 gap-4 my-4 lg:my-0 lg:mx-4`}>
+      <h1 className={`${archivo.className} font-bold text-3xl mb-2 lg:mb-4`}>{day}</h1>
+      <div className="w-4/5 border-y-2 border-black h-6 mb-6 lg:mb-4" />
       <div className="flex flex-row justify-between items-center text-xs lg:text-sm font-bold w-full text-left gap-2 lg:gap-4">
         <h2 className="w-[30%] lg:w-[20%]">
           TIME
@@ -38,7 +38,7 @@ const Receipt = ({ day, scheduleItems }: ReceiptProps) => {
           <p className="w-[30%] lg:w-[20%]">
             {scheduleItem.room}
           </p>
-          <p className="w-[40%] lg:w-[60%] truncate">
+          <p className="w-[40%] lg:w-[60%]">
             {scheduleItem.event}
           </p>
         </div>

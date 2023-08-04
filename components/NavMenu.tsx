@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { Dispatch, MutableRefObject, SetStateAction, useEffect, useRef, useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { MdMenu, MdOpenInNew } from "react-icons/md";
+import { MdMenu } from "react-icons/md";
 
 function listenForOutsideClicks(listening: boolean, setListening: Dispatch<SetStateAction<boolean>>, menuRef: MutableRefObject<any>, setDropdownIsActive: Dispatch<SetStateAction<boolean>>) {
   return () => {
@@ -39,10 +38,6 @@ const NavMenu = () => {
         <AnchorLink href="#schedule" onClick={onClick} className="pr-12 pl-4">Schedule</AnchorLink>
         <AnchorLink href="#prizes" onClick={onClick} className="pr-12 pl-4">Prizes</AnchorLink>
         <AnchorLink href="#resources" onClick={onClick} className="pr-12 pl-4">Resources</AnchorLink>
-        <Link href="https://tamuhack.org" target="_blank" rel="noopener" onClick={onClick} className="pr-12 pl-4 flex flex-row gap-2">
-          TAMUhack
-          <MdOpenInNew size={22} />
-        </Link>
       </nav>
     </div>
   );

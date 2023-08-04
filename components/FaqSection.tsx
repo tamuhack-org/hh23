@@ -39,7 +39,7 @@ const FaqSection = () => {
                     Have additional questions?
                   </h1>
                   <h1 className="text-[rgb(0,0,0,0.4)] lg:text-2xl">
-                    $ {(Math.random() * (20 - 5) + 5).toFixed(2)}
+                    $
                   </h1>
                 </div>
                 <div className="text-xs lg:text-lg pb-2">
@@ -47,8 +47,6 @@ const FaqSection = () => {
                 </div>
               </div>
               <div className="flex flex-row items-center w-full justify-center pt-4 lg:hidden">
-                <Image src="/assets/pie.png" width={75} height={100} alt="pie" />
-                <Image src="/assets/pie.png" width={75} height={100} alt="pie" />
                 <Image src="/assets/pie.png" width={75} height={100} alt="pie" />
               </div>
             </div>

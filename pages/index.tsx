@@ -59,7 +59,7 @@ export default function Home() {
         {/* Mobile and tablet landing section */}
         <div className="lg:hidden relative flex flex-col h-auto mt-6 lg:h-screen w-full lg:flex-row px-8 items-center justify-between pt-6 pb-6 lg:pb-0 lg:pt-0 bg-light-mountain-stars dark:bg-mountain-stars-small bg-cover">
           <motion.div className="flex flex-col items-center w-full gap-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.5 }}>
-            <div className="flex flex-col items-center w-full gap-2 text-shadow-sm-pale-yellow-glow font-bold text-xl">
+            <div className="flex flex-col items-center w-full gap-2 text-shadow-light-theme-pink-glow dark:text-shadow-sm-pale-yellow-glow text-light-theme-pink dark:text-pale-yellow font-bold text-xl">
               <h1>
                 September 9-10, 2023
               </h1>
@@ -76,7 +76,9 @@ export default function Home() {
               </Link>
             </div>
           </motion.div>
-          <Image src="/assets/diner-sign.png" width={400} height={300} alt="diner-sign" className="-mb-5 glow" priority />
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
+            <Image src="/assets/diner-sign.png" width={400} height={300} alt="diner-sign" className="-mb-5 glow" priority />
+          </motion.div>
           <div className="absolute h-3 bg-turquoise w-full bottom-0 z-20" />
         </div>
         {/* Desktop landing section */}
@@ -125,7 +127,7 @@ export default function Home() {
         <div id="schedule" className="flex flex-col items-center bg-schedule-blue w-full px-4 pt-4 lg:pt-0 pb-16 gap-8 lg:gap-16">
           <Image src="/assets/schedule-title.png" width={500} height={200} alt="schedule-title" className="lg:hidden" />
           <Image src="/assets/schedule-title-big.png" width={700} height={200} alt="schedule-title" className="hidden lg:flex" />
-          <div className="relative flex flex-col lg:flex-row items-center lg:items-start lg:justify-center max-[1206px]:w-full w-[1206px] gap-8">
+          <div className="relative flex flex-col lg:flex-row items-center lg:items-start lg:justify-center max-[1206px]:w-full w-[1206px]">
             <Receipt day="SATURDAY" scheduleItems={saturdayScheduleItems} />
             <Receipt day="SUNDAY" scheduleItems={sundayScheduleItems} />
             <AnchorLink href="#resources" className="hidden lg:flex" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>

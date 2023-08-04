@@ -16,7 +16,7 @@ const FaqMenuItem = ({ question, answer }: FaqMenuItemProps) => {
           {question}
         </h1>
         <h1 className="text-[rgb(0,0,0,0.4)] lg:text-2xl">
-          $ {(Math.random() * (20 - 5) + 5).toFixed(2)}
+          $
         </h1>
       </div>
       <div className="text-xs lg:text-lg pb-2">

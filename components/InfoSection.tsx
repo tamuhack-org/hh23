@@ -1,8 +1,9 @@
-import { Zen_Tokyo_Zoo } from 'next/font/google';
+import { Notable, Zen_Tokyo_Zoo } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const zenTokyoZoo = Zen_Tokyo_Zoo({ weight: '400', subsets: ['latin'] });
+const notable = Notable({ weight: '400', subsets: ['latin'] });
 
 const InfoSection = () => {
   return (
@@ -17,7 +18,7 @@ const InfoSection = () => {
           </p>
           <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-4 lg:gap-12 w-full h-auto">
             <div className="flex flex-col justify-center items-start border-[rgb(255,79,128,0.5)] border-double rounded-3xl border-8 p-5 lg:p-6 w-full gap-2 lg:gap-3">
-              <h2 className="text-turquoise font-bold text-md lg:text-2xl">Location</h2>
+              <h2 className="text-turquoise font-black text-md lg:text-2xl">Location</h2>
               <p className="text-xs lg:text-lg">
                 Bethancourt Ballroom (MSC 2300)<br />
                 730 Olsen Blvd, College Station, TX 77845
@@ -32,7 +33,7 @@ const InfoSection = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center lg:justify-start items-start border-[rgb(255,79,128,0.5)] border-double rounded-3xl border-8 p-5 lg:p-6 w-full gap-2 lg:gap-3">
-              <h2 className="text-turquoise font-bold text-md lg:text-2xl">How to Participate</h2>
+            <h2 className="text-turquoise font-black text-md lg:text-2xl">How to Participate</h2>
               <p className="text-xs lg:text-lg">
               To get started, <b>click the apply button above!</b> Sign up as soon as possible to secure your spot and qualify for a care package!
               <br />
