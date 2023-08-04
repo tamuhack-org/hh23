@@ -47,9 +47,9 @@ const InfoSection = () => {
       {/* Diner booth */}
       <div className="flex flex-col items-center justify-center bg-white -mb-6 pt-4 lg:pt-24">
         <div className="flex flex-row items-center justify-center lg:gap-12">
-          <Image src="/assets/diner-booth-1.png" width={200} height={200} alt="diner-booth" className="hidden lg:flex z-10" />
-          <Image src="/assets/diner-booth-2.png" width={200} height={200} alt="diner-booth" className="z-10" />
-          <Image src="/assets/diner-booth-3.png" width={200} height={200} alt="diner-booth" className="hidden lg:flex z-10" />
+          <Image src="/assets/diner-booth-1.PNG" width={200} height={200} alt="diner-booth" className="hidden lg:flex z-10" />
+          <Image src="/assets/diner-booth-2.PNG" width={200} height={200} alt="diner-booth" className="z-10" />
+          <Image src="/assets/diner-booth-3.PNG" width={200} height={200} alt="diner-booth" className="hidden lg:flex z-10" />
         </div>
         <div className="relative w-full h-2 -px-8 bg-[rgb(255,79,128,0.2)] bottom-20 lg:bottom-36 mb-2 lg:mb-3" />
         <div className="relative w-full h-1 bg-[rgb(255,79,128,0.2)] bottom-20 lg:bottom-36" />
