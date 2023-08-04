@@ -53,6 +53,7 @@ const Footer = () => {
           <p className="font-medium text-xl mb-8">Website brought to you by the TAMUhack Creative + Technology Teams</p>
         </div>
         <div className="flex flex-wrap justify-start lg:justify-end flex-grow gap-12">
+          {/* UNCOMMENT WHEN EVENT STARTS */}
           {/* <div>
             <p className="text-base mb-2">Hacker Resources</p>
             <div className="flex flex-col gap-1 mb-2">
@@ -62,7 +63,8 @@ const Footer = () => {
                 </Link>)}
             </div>
           </div> */}
-          <div className="opacity-50 cursor-not-allowed">
+          {/* COMMENT WHEN EVENT STARTS */}
+          <div className="opacity-50 cursor-not-allowed select-none">
             <p className="text-base mb-2 cursor-not-allowed">Hacker Resources</p>
             <div className="flex flex-col gap-1 mb-2">
               {resources.map((resource) =>
