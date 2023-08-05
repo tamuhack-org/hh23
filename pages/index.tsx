@@ -53,7 +53,6 @@ export default function Home() {
     const anchor = (document.URL.split('#').length > 1) ? document.URL.split('#')[1] : null;
     if (anchor) {
       const element = document.getElementById(anchor);
-      console.log(element);
       element?.scrollIntoView({ behavior: 'smooth' });
     }
   }, [loadingComplete]);
