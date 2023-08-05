@@ -17,7 +17,7 @@ interface ReceiptProps {
 
 const Receipt = ({ day, scheduleItems }: ReceiptProps) => {
   return (
-    <motion.div className={`${spaceMono.className} relative flex flex-col items-center justify-center bg-receipt bg-cover max-[571px]:w-full w-[550px] overflow-clip p-8 lg:p-10 gap-4 my-4 lg:my-0 lg:mx-4`} initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }}>
+    <motion.div className={`${spaceMono.className} relative flex flex-col items-center justify-center bg-receipt bg-cover max-[571px]:w-full w-[550px] overflow-clip p-8 lg:p-10 gap-4 my-4 lg:my-0 lg:mx-4`} initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }}>
       {/* COMMENT OUT WHEN SCHEDULE IS FINALIZED */}
       <label className="absolute">Schedule Coming Soon!</label>
       <h1 className={`${archivo.className} font-bold text-3xl mb-2 lg:mb-4`}>{day}</h1>

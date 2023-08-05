@@ -10,13 +10,13 @@ const InfoSection = () => {
     <>
       <div id="info" className="flex flex-col items-center border-t-[12px] lg:border-t-[20px] 2xl:border-t-[32px] border-lighter-blue px-8 pt-8 lg:pt-20 bg-white w-full z-50">
         <div className="flex flex-col justify-center items-center w-full xl:w-[1280px]">
-          <motion.h1 className={`${zenTokyoZoo.className} text-center text-turquoise text-3xl lg:text-6xl mb-2`} initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
+          <motion.h1 className={`${zenTokyoZoo.className} text-center text-turquoise text-4xl mb-6 lg:text-6xl lg:mb-2`} initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
             WELCOME IN, AGGIES!
           </motion.h1>
-          <motion.p className="text-xs lg:text-lg text-center mb-8 lg:mb-16 lg:mt-6 lg:px-12" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
+          <motion.p className="text-xs lg:text-lg text-center mb-8 lg:mb-16 lg:mt-6 lg:px-12" initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
             HowdyHack is a 24-hour, themed, <b>beginner focused</b> hackathon <b>exclusively for Texas A&M students</b>, designed to showcase TAMU&apos;s diverse range of innovative ideas in a collaborative environment. At the event, you&apos;ll have the opportunity to create your own software and hardware products with up to <b>4 team members</b> that wow judges and win prizes. Go gig &apos;em!
           </motion.p>
-          <motion.div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-4 lg:gap-12 w-full h-auto" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
+          <motion.div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-4 lg:gap-12 w-full h-auto" initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
             <div className="flex flex-col justify-center items-start border-[rgb(255,79,128,0.5)] border-double rounded-3xl border-8 p-5 lg:p-6 w-full gap-2 lg:gap-3">
               <h2 className="text-turquoise font-black text-md lg:text-2xl">Location</h2>
               <p className="text-xs lg:text-lg">
