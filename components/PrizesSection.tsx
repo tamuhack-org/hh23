@@ -3,13 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Notable } from 'next/font/google';
 import { PiVinylRecordFill } from 'react-icons/pi';
+import { motion } from 'framer-motion';
 
 const notable = Notable({ weight: '400', subsets: ['latin'] });
 
 const PrizesSection = () => {
   return (
     <div id="prizes" className="flex flex-col items-center justify-center bg-prizes-gray w-full px-4 py-8 lg:py-16 lg:px-8">
-      <div className="flex flex-col items-center justify-center max-[593px]:w-full w-[593px] lg:w-[1000px] xl:w-[1280px] rounded-2xl lg:rounded-3xl border-prizes-light-gray border-4 lg:border-8 max-[400px]:p-4 p-6 sm:p-10 gap-6">
+      <motion.div className="flex flex-col items-center justify-center max-[593px]:w-full w-[593px] lg:w-[1000px] xl:w-[1280px] rounded-2xl lg:rounded-3xl border-prizes-light-gray border-4 lg:border-8 max-[400px]:p-4 p-6 sm:p-10 gap-6" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
         <div className="hidden lg:flex flex-row justify-between items-center w-full">
           <Image src="/assets/prizes-star.svg" width={75} height={100} alt="prizes-star" />
           <Image src="/assets/prizes-star.svg" width={75} height={100} alt="prizes-star" />
@@ -88,7 +89,7 @@ const PrizesSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

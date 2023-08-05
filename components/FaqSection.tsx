@@ -3,6 +3,7 @@ import { faqMenuItems } from '@/data/constants';
 import FaqMenuItem from './FaqMenuItem';
 import { Archivo_Narrow } from 'next/font/google';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const archivoNarrow = Archivo_Narrow({ subsets: ['latin'] });
 
@@ -10,7 +11,7 @@ const FaqSection = () => {
   return (
     <div id="faq" className="flex flex-col items-center justify-center bg-paler-yellow pt-12 lg:pb-16 lg:pt-24">
       <div className="relative w-full h-4 bg-white -top-10 mb-2 lg:-top-20" />
-      <div className="relative flex flex-col items-center justify-center min-[500px]:w-[500px] lg:w-[1000px] xl:w-[1280px] xl:px-16">
+      <motion.div className="relative flex flex-col items-center justify-center min-[500px]:w-[500px] lg:w-[1000px] xl:w-[1280px] xl:px-16" initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
         <Image src="/assets/menu-title-small.png" width={371} height={100} alt="menu-title-small" className="absolute w-2/3 -top-6 z-10 lg:hidden" />
         <Image src="/assets/menu-title-big.png" width={371} height={100} alt="menu-title" className="hidden absolute w-1/3 top-24 z-10 lg:flex" />
         {/* Top menu border */}
@@ -23,13 +24,13 @@ const FaqSection = () => {
           <div className="flex flex-col w-full bg-black border-white border-dashed border-x-16 lg:border-x-32 px-3 lg:px-4">
             <div className="flex flex-col w-full bg-white px-6 py-6 gap-4 lg:px-24 lg:pb-16">
               {/* Buffer div for menu title */}
-              <div className="flex flex-row justify-between items-center w-full h-10 min-[360px]:h-14 min-[400px]:h-[90px] min-[500px]:h-24 min-[1024px]:h-52 xl:h-72">
+              <motion.div className="flex flex-row justify-between items-center w-full h-10 min-[360px]:h-14 min-[400px]:h-[90px] min-[500px]:h-24 min-[1024px]:h-52 xl:h-72" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }} viewport={{ once: true }}>
                 <Image src="/assets/sundae.png" width={100} height={50} alt="sundae" className="hidden lg:flex" />
                 <div className="hidden lg:flex flex-col items-center justify-center gap-6">
                   <Image src="/assets/pie.png" width={110} height={100} alt="pie" />
                   <Image src="/assets/burger.png" width={90} height={100} alt="burger" />
                 </div>
-              </div>
+              </motion.div>
               {faqMenuItems.map((faqMenuItem, i) =>
                 <FaqMenuItem question={faqMenuItem.question} answer={faqMenuItem.answer} key={i} />
               )}
@@ -57,7 +58,7 @@ const FaqSection = () => {
           <div className="absolute bottom-0 w-[40px] lg:w-[64px] bg-black h-[40px] lg:h-[64px] rounded-bl-xl" />
           <div className="absolute bottom-0 right-0 w-[40px] lg:w-[64px] bg-black h-[40px] lg:h-[64px] rounded-br-xl" />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

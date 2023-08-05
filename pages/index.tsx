@@ -21,6 +21,7 @@ export default function Home() {
   const [isRevHovered, setIsRevHovered] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [scheduleItems, setScheduleItems] = useState([]);
+  const [loadingComplete, setLoadingComplete] = useState(false);
   const [carPosition, setCarPosition] = useState({ x: 0, y: 0 });
   const onMouseEnter = () => setIsRevHovered(true);
   const onMouseLeave = () => setIsRevHovered(false);
@@ -39,7 +40,9 @@ export default function Home() {
     }
   }, [carPosition.x]);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   if (!mounted) {
     return null;
@@ -49,6 +52,7 @@ export default function Home() {
     <main
       className={`${archivo.className}`}
     >
+      <Image src="/assets/mountain-stars.svg" alt="preload" width={0} height={0} priority className="hidden" />
       <div className="bg-light-theme-yellow bg-gradient-to-t from-[rgb(255,22,22,0.5)] to-light-theme-yellow dark:bg-dark-purple dark:from-transparent dark:to-transparent dark:text-black">
         {/* Navbar */}
         <Navbar />
@@ -106,7 +110,7 @@ export default function Home() {
           </div>
           <div className="flex flex-row relative items-end justify-center w-full" >
             <motion.div className="flex items-center justify-center -mr-12 z-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
-              <Image src="/assets/diner-sign.png" width={740} height={200} alt="diner" className="z-10 glow" priority />
+              <Image src="/assets/diner-sign.png" width={740} height={200} alt="diner" className="z-10 glow" priority placeholder="empty" />
             </motion.div>
             <motion.div className="flex flex-col justify-stretch z-40 -mx-20 cursor-ew-resize" initial={{ x: "-100vw" }} animate={{ x: 0 }} transition={{ duration: 1, delay: 2 }}>
               <Draggable axis="x" bounds={{ left: 0, top: 0, right: 100, bottom: 0 }} onDrag={handleDrag}>
@@ -114,57 +118,65 @@ export default function Home() {
               </Draggable>
             </motion.div>
             <motion.div className="flex items-center justify-center -mb-2 min-[1120px]:-mb-4 min-[1500px]:-mb-5 -ml-8 mr-12 z-30" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
-              <Image src="/assets/diner.png" width={1100} height={200} alt="diner" className="z-30 glow" priority />
+              <Image src="/assets/diner.png" width={1100} height={200} alt="diner" className="z-30 glow" priority onLoadingComplete={() => setLoadingComplete(true)} />
             </motion.div>
           </div>
           <div className="absolute h-5 2xl:h-8 bg-light-blue w-full bottom-5 2xl:bottom-8" />
           <div className="absolute h-5 2xl:h-8 bg-turquoise w-full bottom-0 z-20" />
         </div>
-        <InfoSection />
-        <FaqSection />
-        <div className="w-full bg-waves bg-cover h-[283px] bg-paler-yellow" />
-        {/* Schedule section */}
-        <div id="schedule" className="flex flex-col items-center bg-schedule-blue w-full px-4 pt-4 lg:pt-0 pb-16 gap-8 lg:gap-16">
-          <Image src="/assets/schedule-title.png" width={500} height={200} alt="schedule-title" className="lg:hidden" />
-          <Image src="/assets/schedule-title-big.png" width={700} height={200} alt="schedule-title" className="hidden lg:flex" />
-          <div className="relative flex flex-col lg:flex-row items-center lg:items-start lg:justify-center max-[1206px]:w-full w-[1206px]">
-            <Receipt day="SATURDAY" scheduleItems={saturdayScheduleItems} />
-            <Receipt day="SUNDAY" scheduleItems={sundayScheduleItems} />
-            <AnchorLink href="#resources" className="hidden lg:flex" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-              {isRevHovered ? (
-                <Image src="/assets/retro-rev-click.png" width={300} height={200} alt="retro-rev-click" className="lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
-              ) : (
-                <Image src="/assets/retro-rev.png" width={300} height={200} alt="retro-rev" className="lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
-              )}
-            </AnchorLink>
-          </div>
-        </div>
-        {/* Schedule to Prizes transition */}
-        <div className="w-full bg-prizes-gray h-6" />
-        <div className="w-full bg-schedule-blue h-2" />
-        <div className="w-full bg-prizes-gray h-5" />
-        <div className="w-full bg-schedule-blue h-1" />
-        <div className="w-full bg-prizes-gray h-5" />
-        <div className="w-full bg-schedule-blue h-[2px]" />
-        {/* Prizes section */}
-        <PrizesSection />
-        {/* Prizes to Resources transition */}
-        <div className="bg-tiles w-full bg-cover h-24 xl:h-[147px] bg-white flex flex-col justify-between">
-          <div className="w-full bg-gradient-to-b from-prizes-gray from-10% to-transparent h-12 xl:h-[73px]" />
-          <div className="w-full bg-gradient-to-t from-white from-10% to-transparent h-12 xl:h-[73px]" />
-        </div>
-        <ResourcesSection />
-        {/* Resources to Footer transition */}
-        <div className="relative w-full bg-cover h-24 xl:h-[147px] bg-resources-pink flex flex-col justify-between">
-          <div className="bg-tiles bg-cover w-full h-24 xl:h-[147px] flex flex-col opacity-50" />
-          <div className="absolute w-full bg-gradient-to-b from-white from-10% to-transparent h-24 xl:h-[73px]" />
-        </div>
-        <div className="relative w-full bg-cover h-24 xl:h-[147px] bg-resources-pink flex flex-col justify-between">
-          <div className="bg-tiles bg-cover w-full h-24 xl:h-[147px] flex flex-col opacity-50" />
-          <div className="absolute w-full bottom-0 bg-gradient-to-t from-pale-pink from-10% to-transparent h-12 xl:h-[73px]" />
-        </div>
-        {/* Footer */}
-        <Footer />
+        {loadingComplete &&
+          <>
+            <InfoSection />
+            <FaqSection />
+            <div className="w-full bg-waves bg-cover h-[283px] bg-paler-yellow" />
+            {/* Schedule section */}
+            <div id="schedule" className="flex flex-col items-center bg-schedule-blue w-full px-4 pt-4 lg:pt-0 pb-16 gap-8 lg:gap-16">
+              <motion.div initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} viewport={{ once: true }}>
+                <Image src="/assets/schedule-title.png" width={500} height={200} alt="schedule-title" className="lg:hidden" />
+                <Image src="/assets/schedule-title-big.png" width={700} height={200} alt="schedule-title" className="hidden lg:flex" />
+              </motion.div>
+              <div className="relative flex flex-col lg:flex-row items-center lg:items-start lg:justify-center max-[1206px]:w-full w-[1206px]">
+                <Receipt day="SATURDAY" scheduleItems={saturdayScheduleItems} />
+                <Receipt day="SUNDAY" scheduleItems={sundayScheduleItems} />
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }} viewport={{ once: true }}>
+                  <AnchorLink href="#resources" className="hidden lg:flex" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                    {isRevHovered ? (
+                      <Image src="/assets/retro-rev-click.png" width={300} height={200} alt="retro-rev-click" className="lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
+                    ) : (
+                      <Image src="/assets/retro-rev.png" width={300} height={200} alt="retro-rev" className="lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
+                    )}
+                  </AnchorLink>
+                </motion.div>
+              </div>
+            </div>
+            {/* Schedule to Prizes transition */}
+            <div className="w-full bg-prizes-gray h-6" />
+            <div className="w-full bg-schedule-blue h-2" />
+            <div className="w-full bg-prizes-gray h-5" />
+            <div className="w-full bg-schedule-blue h-1" />
+            <div className="w-full bg-prizes-gray h-5" />
+            <div className="w-full bg-schedule-blue h-[2px]" />
+            {/* Prizes section */}
+            <PrizesSection />
+            {/* Prizes to Resources transition */}
+            <div className="bg-tiles w-full bg-cover h-24 xl:h-[147px] bg-white flex flex-col justify-between">
+              <div className="w-full bg-gradient-to-b from-prizes-gray from-10% to-transparent h-12 xl:h-[73px]" />
+              <div className="w-full bg-gradient-to-t from-white from-10% to-transparent h-12 xl:h-[73px]" />
+            </div>
+            <ResourcesSection />
+            {/* Resources to Footer transition */}
+            <div className="relative w-full bg-cover h-24 xl:h-[147px] bg-resources-pink flex flex-col justify-between">
+              <div className="bg-tiles bg-cover w-full h-24 xl:h-[147px] flex flex-col opacity-50" />
+              <div className="absolute w-full bg-gradient-to-b from-white from-10% to-transparent h-24 xl:h-[73px]" />
+            </div>
+            <div className="relative w-full bg-cover h-24 xl:h-[147px] bg-resources-pink flex flex-col justify-between">
+              <div className="bg-tiles bg-cover w-full h-24 xl:h-[147px] flex flex-col opacity-50" />
+              <div className="absolute w-full bottom-0 bg-gradient-to-t from-pale-pink from-10% to-transparent h-12 xl:h-[73px]" />
+            </div>
+            {/* Footer */}
+            <Footer />
+          </>
+        }
       </div>
     </main >
   )
