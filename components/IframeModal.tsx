@@ -26,7 +26,7 @@ const IframeModal = ({ url, onClose }: IframeModalProps) => {
           <button className="absolute top-6 right-6 hover:scale-105" onClick={onClose}>
             <MdClose size={40} className="text-light-theme-pink dark:text-pale-yellow" />
           </button>
-          <iframe src={url} className="w-full h-full select-none rounded-md pointer-events-none" />
+          <iframe src={url} className="w-full h-full rounded-md" />
         </motion.div>
       </motion.div>
   );
