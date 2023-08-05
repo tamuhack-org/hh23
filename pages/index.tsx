@@ -13,7 +13,8 @@ import Footer from '@/components/Footer'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { useEffect, useState } from 'react'
 import Draggable from 'react-draggable'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import IframeModal from '@/components/IframeModal'
 
 const archivo = Archivo({ subsets: ['latin'] });
 
@@ -23,6 +24,7 @@ export default function Home() {
   const [scheduleItems, setScheduleItems] = useState([]);
   const [loadingComplete, setLoadingComplete] = useState(false);
   const [carPosition, setCarPosition] = useState({ x: 0, y: 0 });
+  const [openGame, setOpenGame] = useState(false);
   const onMouseEnter = () => setIsRevHovered(true);
   const onMouseLeave = () => setIsRevHovered(false);
 
@@ -34,15 +36,27 @@ export default function Home() {
     });
   };
 
+  const closeGame = () => {
+    setOpenGame(false);
+  };
+
   useEffect(() => {
     if (carPosition.x === 100) {
-      window.location.assign('https://nitroguy10.github.io/Rev-Your-Engines/');
+      setOpenGame(true);
     }
   }, [carPosition.x]);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (openGame) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [openGame])
 
   if (!mounted) {
     return null;
@@ -52,6 +66,9 @@ export default function Home() {
     <main
       className={`${archivo.className}`}
     >
+      <AnimatePresence>
+        {openGame && <IframeModal url="https://nitroguy10.github.io/Rev-Your-Engines/" onClose={closeGame} />}
+      </AnimatePresence>
       <Image src="/assets/mountain-stars.svg" alt="preload" width={0} height={0} priority className="hidden" />
       <div className="bg-light-theme-yellow bg-gradient-to-t from-[rgb(255,22,22,0.5)] to-light-theme-yellow dark:bg-dark-purple dark:from-transparent dark:to-transparent dark:text-black">
         {/* Navbar */}
@@ -131,7 +148,7 @@ export default function Home() {
             <div className="w-full bg-waves bg-cover h-[283px] bg-paler-yellow" />
             {/* Schedule section */}
             <div id="schedule" className="flex flex-col items-center bg-schedule-blue w-full px-4 pt-4 lg:pt-0 pb-16 gap-8 lg:gap-16">
-              <motion.div initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.1 }} viewport={{ once: true }}>
+              <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.1 }} viewport={{ once: true }}>
                 <Image src="/assets/schedule-title.png" width={500} height={200} alt="schedule-title" className="lg:hidden" />
                 <Image src="/assets/schedule-title-big.png" width={700} height={200} alt="schedule-title" className="hidden lg:flex" />
               </motion.div>

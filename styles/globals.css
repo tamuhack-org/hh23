@@ -2,22 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-#preloader {
-  position: fixed; 
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 9999;
-    background: #FFFFFF no-repeat center center;
+.theme-toggle-dark {
+  transition: all;
+  transition-duration: 200ms;
 }
 
-.theme-toggle-dark {
-  filter: drop-shadow(0 0 1em rgba(255, 204, 103, 0.5));
+.theme-toggle-dark:hover {
+  filter: drop-shadow(0 0 0.6em rgba(255, 204, 103, 0.5));
 }
 
-.theme-toggle-dark {
-  filter: drop-shadow(0 0 1em rgba(255, 57, 119, 0.5));
+.theme-toggle-light {
+  transition: all;
+  transition-duration: 200ms;
+}
+
+.theme-toggle-light:hover {
+  filter: drop-shadow(0 0 0.6em rgba(255, 57, 119, 0.5));
 }
 
 .glow {
