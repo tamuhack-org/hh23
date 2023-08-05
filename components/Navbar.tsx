@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { useTheme } from 'next-themes';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { motion } from 'framer-motion';
@@ -16,21 +15,21 @@ const Navbar = () => {
         <Image src="/assets/hh-logo.png" width={50} height={50} alt="hh-logo" priority />
       </Link>
       <div className="flex justify-center items-center gap-6 font-bold text-lg">
-        <AnchorLink href="#info" className="hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow py-1 px-2 rounded-md transition-text-shadow duration-200">
+        <Link href="#info" scroll={false} className="hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow py-1 px-2 rounded-md transition-text-shadow duration-200">
           Info
-        </AnchorLink>
-        <AnchorLink href="#faq" className="hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow py-1 px-2 rounded-md transition-text-shadow duration-200">
+        </Link>
+        <Link href="#faq" scroll={false} className="hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow py-1 px-2 rounded-md transition-text-shadow duration-200">
           FAQ
-        </AnchorLink>
-        <AnchorLink href="#schedule" className="hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow py-1 px-2 rounded-md transition-text-shadow duration-200">
+        </Link>
+        <Link href="#schedule" scroll={false} className="hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow py-1 px-2 rounded-md transition-text-shadow duration-200">
           Schedule
-        </AnchorLink>
-        <AnchorLink href="#prizes" className="hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow py-1 px-2 rounded-md transition-text-shadow duration-200">
+        </Link>
+        <Link href="#prizes" scroll={false} className="hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow py-1 px-2 rounded-md transition-text-shadow duration-200">
           Prizes
-        </AnchorLink>
-        <AnchorLink href="#resources" className="hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow py-1 px-2 rounded-md transition-text-shadow duration-200">
+        </Link>
+        <Link href="#resources" scroll={false} className="hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow py-1 px-2 rounded-md transition-text-shadow duration-200">
           Resources
-        </AnchorLink>
+        </Link>
       </div>
       <div className="flex justify-end items-center">
         <button

@@ -10,7 +10,6 @@ import FaqSection from '@/components/FaqSection'
 import PrizesSection from '@/components/PrizesSection'
 import ResourcesSection from '@/components/ResourcesSection'
 import Footer from '@/components/Footer'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { useEffect, useState } from 'react'
 import Draggable from 'react-draggable'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -49,6 +48,15 @@ export default function Home() {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    const anchor = (document.URL.split('#').length > 1) ? document.URL.split('#')[1] : null;
+    if (anchor) {
+      const element = document.getElementById(anchor);
+      console.log(element);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [loadingComplete]);
 
   useEffect(() => {
     if (openGame) {
@@ -156,13 +164,13 @@ export default function Home() {
                 <Receipt day="SATURDAY" scheduleItems={saturdayScheduleItems} />
                 <Receipt day="SUNDAY" scheduleItems={sundayScheduleItems} />
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }} viewport={{ once: true }}>
-                  <AnchorLink href="#resources" className="hidden lg:flex" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                  <Link href="#resources" scroll={false} className="hidden lg:flex" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                     {isRevHovered ? (
                       <Image src="/assets/retro-rev-click.png" width={300} height={200} alt="retro-rev-click" className="lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
                     ) : (
                       <Image src="/assets/retro-rev.png" width={300} height={200} alt="retro-rev" className="lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
                     )}
-                  </AnchorLink>
+                  </Link>
                 </motion.div>
               </div>
             </div>

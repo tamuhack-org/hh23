@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .theme-toggle-dark {
   transition: all;
   transition-duration: 200ms;
