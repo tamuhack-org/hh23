@@ -138,7 +138,7 @@ export default function Home() {
             </motion.div>
             <motion.div className="flex flex-col justify-stretch z-40 -mx-20 cursor-ew-resize" initial={{ x: "-100vw" }} animate={{ x: 0 }} transition={{ duration: 1, delay: 2 }}>
               <Draggable axis="x" bounds={{ left: 0, top: 0, right: 100, bottom: 0 }} onDrag={handleDrag}>
-                <Image src="/assets/car.png" width={350} height={100} alt="car" draggable="false" priority />
+                <Image src="/assets/car.png" width={350} height={100} alt="car" draggable="false" priority title="Drag Me!" />
               </Draggable>
             </motion.div>
             <motion.div className="flex items-center justify-center -mb-2 min-[1120px]:-mb-4 min-[1500px]:-mb-5 -ml-8 mr-12 z-30" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
@@ -165,7 +165,7 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }} viewport={{ once: true }}>
                   <Link href="#resources" scroll={false} className="hidden lg:flex" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                     {isRevHovered ? (
-                      <Image src="/assets/retro-rev-click.png" width={300} height={200} alt="retro-rev-click" className="lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
+                      <Image src="/assets/retro-rev-click.png" width={300} height={200} alt="retro-rev-click" className="lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" priority />
                     ) : (
                       <Image src="/assets/retro-rev.png" width={300} height={200} alt="retro-rev" className="lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
                     )}

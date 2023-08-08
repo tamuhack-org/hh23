@@ -17,7 +17,7 @@ const PrizesSection = () => {
         </div>
         <Image src="/assets/prizes-title-big.png" width={800} height={200} alt="prizes-title" className="mt-0 lg:-mt-8 jukebox-glow" />
         {/* Mobile and tablet */}
-        <div className="flex flex-col w-full items-center justify-center gap-6 lg:hidden">
+        <motion.div className="flex flex-col w-full items-center justify-center gap-6 lg:hidden" initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }}>
           {prizes.map((prize, i) =>
             <div className="flex flex-row justify-center items-center w-full gap-4" key={i}>
               <PiVinylRecordFill size={20} fill="#92CEAB" className="" />
@@ -40,9 +40,9 @@ const PrizesSection = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* Desktop */}
-        <div className="hidden lg:flex flex-col w-full justify-center items-center gap-10">
+        <motion.div className="hidden lg:flex flex-col w-full justify-center items-center gap-10" initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }}>
           <div className="flex flex-row justify-center items-center w-full gap-8 mt-8">
             <Image src="/assets/mint-green-arrow.svg" width={50} height={50} alt="mint-green-arrow" className="scale-[-1]" />
             <div className="flex flex-row justify-start items-center w-full rounded-3xl border-mint-green border-6 hover:shadow-mint-green-glow transition-shadow duration-200 bg-[#ffffea] p-5 gap-6 text-prizes-gray">
@@ -88,7 +88,7 @@ const PrizesSection = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );

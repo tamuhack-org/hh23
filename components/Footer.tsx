@@ -24,7 +24,8 @@ const Footer = () => {
             <input
               type="text"
               name="EMAIL"
-              className="2xl:w-96 w-64 px-4 py-2 rounded-lg bg-[rgba(217,217,217,0.09)] border border-black dark:border-white"
+              placeholder="Enter your email address"
+              className="2xl:w-96 w-64 px-4 py-2 rounded-lg bg-[rgba(217,217,217,0.09)] border border-black dark:border-white placeholder:text-[rgb(255,57,119,0.6)] dark:placeholder:text-[rgb(255,204,103,0.6)]"
               id="mce-EMAIL"
             />
             <button className="clear">
