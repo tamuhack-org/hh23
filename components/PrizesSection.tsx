@@ -10,16 +10,16 @@ const notable = Notable({ weight: '400', subsets: ['latin'] });
 const PrizesSection = () => {
   return (
     <div id="prizes" className="flex flex-col items-center justify-center bg-prizes-gray w-full px-4 py-8 lg:py-16 lg:px-8">
-      <motion.div className="flex flex-col items-center justify-center max-[593px]:w-full w-[593px] lg:w-[1000px] xl:w-[1280px] rounded-2xl lg:rounded-3xl border-prizes-light-gray border-4 lg:border-8 max-[400px]:p-4 p-6 sm:p-10 gap-6" initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
+      <motion.div className="flex flex-col items-center justify-center max-[593px]:w-full w-[593px] lg:w-[1000px] xl:w-[1280px] rounded-2xl lg:rounded-3xl border-prizes-light-gray border-4 lg:border-8 max-[400px]:p-4 p-6 sm:p-10 gap-6" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
         <div className="hidden lg:flex flex-row justify-between items-center w-full">
           <Image src="/assets/prizes-star.svg" width={75} height={100} alt="prizes-star" />
           <Image src="/assets/prizes-star.svg" width={75} height={100} alt="prizes-star" />
         </div>
         <Image src="/assets/prizes-title-big.png" width={800} height={200} alt="prizes-title" className="mt-0 lg:-mt-8 jukebox-glow" />
         {/* Mobile and tablet */}
-        <motion.div className="flex flex-col w-full items-center justify-center gap-6 lg:hidden" initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }}>
+        <motion.div className="flex flex-col w-full items-center justify-center gap-6 lg:hidden" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }}>
           {prizes.map((prize, i) =>
-            <div className="flex flex-row justify-center items-center w-full gap-4" key={i}>
+            <div className="flex flex-row justify-center items-center w-full gap-3" key={i}>
               <PiVinylRecordFill size={20} fill="#92CEAB" className="" />
               <div className="flex flex-col rounded-3xl w-full bg-[#ffffea] border-4 border-mint-green p-3 gap-1 text-prizes-gray hover:shadow-mint-green-glow transition-shadow duration-200 text-center">
                 <h1 className={`${notable.className} font-black text-sm mb-1`}>{prize.title}</h1>
@@ -29,20 +29,21 @@ const PrizesSection = () => {
               <PiVinylRecordFill size={20} fill="#92CEAB" className="" />
             </div>
           )}
-          
+
           <div className="flex flex-row justify-end sm:justify-between items-center w-full gap-6 mt-4">
             <div className="bg-prizes-light-gray w-1/2 h-8 rounded-3xl hidden sm:flex" />
             <div className="flex flex-row justify-end items-center w-1/2 gap-2">
               <Image src="/assets/light-gray-circle.svg" width={20} height={20} alt="mint-green-circle" />
               <Image src="/assets/light-gray-circle.svg" width={20} height={20} alt="mint-green-circle" />
-              <Link href="#">
+              {/* <Link href="https://howl-2.vercel.app/" target="_blank" rel="noopener">
                 <Image src="/assets/hacker-queue.png" width={100} height={20} alt="hacker-queue" />
-              </Link>
+              </Link> */}
+              <Image src="/assets/hacker-queue.png" width={100} height={20} alt="hacker-queue" className="cursor-not-allowed opacity-50" />
             </div>
           </div>
         </motion.div>
         {/* Desktop */}
-        <motion.div className="hidden lg:flex flex-col w-full justify-center items-center gap-10" initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }}>
+        <motion.div className="hidden lg:flex flex-col w-full justify-center items-center gap-10" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }}>
           <div className="flex flex-row justify-center items-center w-full gap-8 mt-8">
             <Image src="/assets/mint-green-arrow.svg" width={50} height={50} alt="mint-green-arrow" className="scale-[-1]" />
             <div className="flex flex-row justify-start items-center w-full rounded-3xl border-mint-green border-6 hover:shadow-mint-green-glow transition-shadow duration-200 bg-[#ffffea] p-5 gap-6 text-prizes-gray">
@@ -83,9 +84,10 @@ const PrizesSection = () => {
             <div className="flex flex-row justify-end items-center w-1/2 gap-8">
               <Image src="/assets/light-gray-circle.svg" width={48} height={20} alt="mint-green-circle" />
               <Image src="/assets/light-gray-circle.svg" width={48} height={20} alt="mint-green-circle" />
-              <Link href="#" className="hover:scale-110 transition duration-200">
+              {/* <Link href="https://howl-2.vercel.app/" className="hover:scale-110 transition duration-200" target="_blank" rel="noopener">
                 <Image src="/assets/hacker-queue.png" width={170} height={20} alt="hacker-queue" />
-              </Link>
+              </Link> */}
+              <Image src="/assets/hacker-queue.png" width={170} height={20} alt="hacker-queue" className="cursor-not-allowed opacity-50" />
             </div>
           </div>
         </motion.div>

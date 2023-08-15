@@ -21,7 +21,7 @@ export const faqMenuItems = [
   },
   {
     question: 'When is the deadline to apply?',
-    answer: 'The deadline for registration is September 4, at 23:59. The deadline for waitlist registration is September 6, at 23:59.',
+    answer: 'The deadline for registration is September 3, at 11:59 PM.',
   },
   {
     question: 'Will there be workshops or talks?',

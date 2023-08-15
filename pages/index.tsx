@@ -96,10 +96,10 @@ export default function Home() {
               </h1>
             </div>
             <div className="flex flex-row w-full justify-center items-center gap-3 font-extrabold text-sm">
-              <Link href="#" className="py-2 w-32 text-center rounded-lg border-2 bg-light-theme-pink border-light-theme-pink text-light-theme-yellow hover:shadow-light-theme-pink-glow dark:bg-pale-yellow dark:border-pale-yellow dark:text-dark-purple dark:hover:shadow-pale-yellow-glow">
+              <Link href="https://register.tamuhack.com" className="py-2 w-32 text-center rounded-lg border-2 bg-light-theme-pink border-light-theme-pink text-light-theme-yellow hover:shadow-light-theme-pink-glow dark:bg-pale-yellow dark:border-pale-yellow dark:text-dark-purple dark:hover:shadow-pale-yellow-glow">
                 APPLY
               </Link>
-              <Link href="#" className="py-2 w-32 text-center bg-transparent rounded-lg border-2 border-light-theme-pink text-light-theme-pink hover:shadow-light-theme-pink-glow dark:border-pale-yellow dark:text-pale-yellow dark:hover:shadow-pale-yellow-glow">
+              <Link href="https://register.tamuhack.com" className="py-2 w-32 text-center bg-transparent rounded-lg border-2 border-light-theme-pink text-light-theme-pink hover:shadow-light-theme-pink-glow dark:border-pale-yellow dark:text-pale-yellow dark:hover:shadow-pale-yellow-glow">
                 MENTOR
               </Link>
             </div>
@@ -123,10 +123,10 @@ export default function Home() {
                 </h1>
               </div>
               <div className="flex flex-row justify-center items-center gap-6 font-extrabold text-sm xl:text-base z-40">
-                <Link href="#" className="py-2 w-52 text-center rounded-lg border-3 transition duration-200 bg-light-theme-pink border-light-theme-pink text-light-theme-yellow hover:shadow-light-theme-pink-glow dark:bg-pale-yellow dark:border-pale-yellow dark:text-dark-purple dark:hover:shadow-pale-yellow-glow">
+                <Link href="https://register.tamuhack.com" className="py-2 w-52 text-center rounded-lg border-3 transition duration-200 bg-light-theme-pink border-light-theme-pink text-light-theme-yellow hover:shadow-light-theme-pink-glow dark:bg-pale-yellow dark:border-pale-yellow dark:text-dark-purple dark:hover:shadow-pale-yellow-glow">
                   APPLY
                 </Link>
-                <Link href="#" className="py-2 w-52 text-center bg-transparent rounded-lg border-3 transition duration-200 border-light-theme-pink text-light-theme-pink hover:shadow-light-theme-pink-glow dark:border-pale-yellow dark:text-pale-yellow dark:hover:shadow-pale-yellow-glow">
+                <Link href="https://register.tamuhack.com" className="py-2 w-52 text-center bg-transparent rounded-lg border-3 transition duration-200 border-light-theme-pink text-light-theme-pink hover:shadow-light-theme-pink-glow dark:border-pale-yellow dark:text-pale-yellow dark:hover:shadow-pale-yellow-glow">
                   MENTOR
                 </Link>
               </div>
@@ -136,7 +136,7 @@ export default function Home() {
             <motion.div className="flex items-center justify-center -mr-12 z-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
               <Image src="/assets/diner-sign.png" width={740} height={200} alt="diner" className="z-10 glow" priority placeholder="empty" />
             </motion.div>
-            <motion.div className="flex flex-col justify-stretch z-40 -mx-20 cursor-ew-resize" initial={{ x: "-100vw" }} animate={{ x: 0 }} transition={{ duration: 1, delay: 2 }}>
+            <motion.div className="flex flex-col justify-stretch z-40 -mx-20 cursor-grab active:cursor-grabbing" initial={{ x: "-100vw" }} animate={{ x: 0 }} transition={{ duration: 1, delay: 2 }}>
               <Draggable axis="x" bounds={{ left: 0, top: 0, right: 100, bottom: 0 }} onDrag={handleDrag}>
                 <Image src="/assets/car.png" width={350} height={100} alt="car" draggable="false" priority title="Drag Me!" />
               </Draggable>

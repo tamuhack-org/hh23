@@ -10,13 +10,13 @@ const InfoSection = () => {
     <>
       <div id="info" className="flex flex-col items-center border-t-[12px] lg:border-t-[20px] 2xl:border-t-[32px] border-lighter-blue px-8 pt-8 lg:pt-20 bg-white w-full z-50">
         <div className="flex flex-col justify-center items-center w-full xl:w-[1280px]">
-          <motion.h1 className={`${zenTokyoZoo.className} text-center text-turquoise text-4xl mb-6 lg:text-6xl lg:mb-2`} initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
+          <motion.h1 className={`${zenTokyoZoo.className} text-center text-turquoise text-4xl mb-6 lg:text-6xl lg:mb-2`} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
             WELCOME IN, AGGIES!
           </motion.h1>
-          <motion.p className="text-xs lg:text-lg text-center mb-8 lg:mb-16 lg:mt-6 lg:px-12" initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
+          <motion.p className="text-xs lg:text-lg text-center mb-8 lg:mb-16 lg:mt-6 lg:px-12" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
             HowdyHack is a 24-hour, themed, <b>beginner focused</b> hackathon <b>exclusively for Texas A&M students</b>, designed to showcase TAMU&apos;s diverse range of innovative ideas in a collaborative environment. At the event, you&apos;ll have the opportunity to create your own software and hardware products with up to <b>4 team members</b> that wow judges and win prizes. Go gig &apos;em!
           </motion.p>
-          <motion.div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-4 lg:gap-12 w-full h-auto" initial={{ opacity: 0  }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
+          <motion.div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-4 lg:gap-12 w-full h-auto" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
             <div className="flex flex-col justify-center items-start border-[rgb(255,79,128,0.5)] border-double rounded-3xl border-8 p-5 lg:p-6 w-full gap-2 lg:gap-3">
               <h2 className="text-turquoise font-black text-md lg:text-2xl">Location</h2>
               <p className="text-xs lg:text-lg">
@@ -35,13 +35,16 @@ const InfoSection = () => {
             <div className="flex flex-col justify-center lg:justify-start items-start border-[rgb(255,79,128,0.5)] border-double rounded-3xl border-8 p-5 lg:p-6 w-full gap-2 lg:gap-3">
               <h2 className="text-turquoise font-black text-md lg:text-2xl">How to Participate</h2>
               <p className="text-xs lg:text-lg">
-                To get started, <b>click the apply button above!</b> Sign up as soon as possible to secure your spot and qualify for a care package!
+                To get started, <b>click the apply button above!</b> Sign up as soon as possible to secure your spot!
                 <br />
                 <br />
                 After you sign up, you will receive a confirmation email letting you know you&apos;re good to go. You can either form a team yourself, or you find one during the team building portion right before the competition!
               </p>
             </div>
           </motion.div>
+          <p className="text-[10px] lg:text-xs mt-6 lg:mt-12 italic text-center">
+            Applications are considered on a rolling basis; an application being accepted does not guarantee a spot in the hackathon. We have a limited space at the MSC, so we kindly ask you to arrive early on the day of the hackathon.
+          </p>
         </div>
       </div>
       {/* Diner booth */}
