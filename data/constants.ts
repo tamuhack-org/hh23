@@ -231,7 +231,7 @@ export const socials = [
   },
   {
     name: 'Discord',
-    link: 'https://discord.gg/jSTPpy4F',
+    link: 'https://discord.gg/vwjcPRd4rh',
   },
 ];
 
