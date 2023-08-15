@@ -20,13 +20,13 @@ const PrizesSection = () => {
         <motion.div className="flex flex-col w-full items-center justify-center gap-6 lg:hidden" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }}>
           {prizes.map((prize, i) =>
             <div className="flex flex-row justify-center items-center w-full gap-3" key={i}>
-              <PiVinylRecordFill size={20} fill="#92CEAB" className="" />
+              <PiVinylRecordFill size={20} fill="#92CEAB" />
               <div className="flex flex-col rounded-3xl w-full bg-[#ffffea] border-4 border-mint-green p-3 gap-1 text-prizes-gray hover:shadow-mint-green-glow transition-shadow duration-200 text-center">
                 <h1 className={`${notable.className} font-black text-sm mb-1`}>{prize.title}</h1>
                 <p className="text-xs text-prizes-light-gray">{prize.description}</p>
                 <h2 className="font-bold text-xs mt-2">{prize.prize}</h2>
               </div>
-              <PiVinylRecordFill size={20} fill="#92CEAB" className="" />
+              <PiVinylRecordFill size={20} fill="#92CEAB" />
             </div>
           )}
 
