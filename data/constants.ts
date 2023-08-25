@@ -4,6 +4,10 @@ export const faqMenuItems = [
     answer: 'Any Texas A&M graduate / undergraduate student who is at least 18. Regardless of your experience, education, or background, as long as you are excited about learning, building, and having fun, we\'d love for you to attend.',
   },
   {
+    question: 'When is the deadline to apply?',
+    answer: 'The deadline for registration is September 3, at 11:59 PM. Applications are considered on a rolling basis, so please try to apply early!',
+  },
+  {
     question: 'How much experience do I need?',
     answer: 'Absolutely zero! We want you here because you have a passion for creating, not because you\'re the most experienced hacker on the block. We\'ll have lots of resources including workshops and a bunch of mentors to help beginners get started. There\'ll also be plenty of people to learn from and help out!',
   },
@@ -18,10 +22,6 @@ export const faqMenuItems = [
   {
     question: 'How do teams work?',
     answer: 'Teams are limited to 4 hackers. You don\'t need to have a team before the event or have one at all, but hacking with friends is more fun! There will be plenty of time after the opening ceremony to form teams if you don\'t have one yet.',
-  },
-  {
-    question: 'When is the deadline to apply?',
-    answer: 'The deadline for registration is September 3, at 11:59 PM.',
   },
   {
     question: 'Will there be workshops or talks?',
@@ -231,7 +231,7 @@ export const socials = [
   },
   {
     name: 'Discord',
-    link: 'https://discord.gg/vwjcPRd4rh',
+    link: 'https://discord.gg/VZyKP4JcC3',
   },
 ];
 

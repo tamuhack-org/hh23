@@ -19,7 +19,7 @@ const SmallNavbar = () => {
           onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
         >
           {theme == 'light' ? <MdDarkMode size={25} className="fill-light-theme-pink" /> : <MdLightMode size={25} className="fill-pale-yellow" />}
-        </button>
+        </button> 
         <NavMenu />
       </div>
     </motion.div>
