@@ -99,7 +99,7 @@ export default function Home() {
               <Link href="https://register.tamuhack.com" className="py-2 w-32 text-center rounded-lg border-2 bg-light-theme-pink border-light-theme-pink text-light-theme-yellow hover:shadow-light-theme-pink-glow dark:bg-pale-yellow dark:border-pale-yellow dark:text-dark-purple dark:hover:shadow-pale-yellow-glow">
                 APPLY
               </Link>
-              <Link href="https://register.tamuhack.com" className="py-2 w-32 text-center bg-transparent rounded-lg border-2 border-light-theme-pink text-light-theme-pink hover:shadow-light-theme-pink-glow dark:border-pale-yellow dark:text-pale-yellow dark:hover:shadow-pale-yellow-glow">
+              <Link href="https://forms.gle/HX9ShvWDLuxgVBcG7" className="py-2 w-32 text-center bg-transparent rounded-lg border-2 border-light-theme-pink text-light-theme-pink hover:shadow-light-theme-pink-glow dark:border-pale-yellow dark:text-pale-yellow dark:hover:shadow-pale-yellow-glow">
                 MENTOR
               </Link>
             </div>
@@ -126,7 +126,7 @@ export default function Home() {
                 <Link href="https://register.tamuhack.com" className="py-2 w-52 text-center rounded-lg border-3 transition duration-200 bg-light-theme-pink border-light-theme-pink text-light-theme-yellow hover:shadow-light-theme-pink-glow dark:bg-pale-yellow dark:border-pale-yellow dark:text-dark-purple dark:hover:shadow-pale-yellow-glow">
                   APPLY
                 </Link>
-                <Link href="https://register.tamuhack.com" className="py-2 w-52 text-center bg-transparent rounded-lg border-3 transition duration-200 border-light-theme-pink text-light-theme-pink hover:shadow-light-theme-pink-glow dark:border-pale-yellow dark:text-pale-yellow dark:hover:shadow-pale-yellow-glow">
+                <Link href="https://forms.gle/HX9ShvWDLuxgVBcG7" className="py-2 w-52 text-center bg-transparent rounded-lg border-3 transition duration-200 border-light-theme-pink text-light-theme-pink hover:shadow-light-theme-pink-glow dark:border-pale-yellow dark:text-pale-yellow dark:hover:shadow-pale-yellow-glow">
                   MENTOR
                 </Link>
               </div>
