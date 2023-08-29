@@ -8,6 +8,10 @@ export const faqMenuItems = [
     answer: 'The deadline for registration is September 3, at 11:59 PM. Applications are considered on a rolling basis, so please try to apply early!',
   },
   {
+    question: 'Do I have to stay at the MSC the entire time?',
+    answer: 'No, but you must be present at the awards ceremony with your team to receive prizes. Extenuating circumstances will be considered on a case-by-case basis.',
+  },
+  {
     question: 'How much experience do I need?',
     answer: 'Absolutely zero! We want you here because you have a passion for creating, not because you\'re the most experienced hacker on the block. We\'ll have lots of resources including workshops and a bunch of mentors to help beginners get started. There\'ll also be plenty of people to learn from and help out!',
   },
@@ -187,8 +191,8 @@ export const prizes = [
     prize: 'Rev Pillow Plush',
   },
   {
-    title: 'Best Retro Hack',
-    description: 'This prize will be awarded to the best retro related hack',
+    title: 'Best Small Business Hack',
+    description: 'This prize will be awarded to the best hack related to helping small or local businesses',
     prize: 'Vinyl Record Player',
   },
 ];
@@ -204,11 +208,11 @@ export const resources = [
     link: 'https://helpr.vercel.app',
     description: 'Devpost is where you submit your projects. It also shows the rules, prizes, sponsors, and judges. Showcase your work and compete with other hackers!',
   },
-  {
-    name: 'Spotify Queue',
-    link: 'https://helpr.vercel.app',
-    description: 'Want to listen to some tunes while hacking? Join our Spotify Queue and add your favorite songs to the playlist.',
-  },
+  // {
+  //   name: 'Spotify Queue',
+  //   link: 'https://helpr.vercel.app',
+  //   description: 'Want to listen to some tunes while hacking? Join our Spotify Queue and add your favorite songs to the playlist.',
+  // },
   {
     name: 'Hacker Guide',
     link: 'https://helpr.vercel.app',
