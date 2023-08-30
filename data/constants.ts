@@ -9,7 +9,7 @@ export const faqMenuItems = [
   },
   {
     question: 'Do I have to stay at the MSC the entire time?',
-    answer: 'No, but you must be present at the awards ceremony with your team to receive prizes. Extenuating circumstances will be considered on a case-by-case basis.',
+    answer: 'No, but you must be present at check-in and the awards ceremony with your team to receive prizes. Extenuating circumstances will be considered on a case-by-case basis.',
   },
   {
     question: 'How much experience do I need?',
