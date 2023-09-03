@@ -17,10 +17,17 @@ import IframeModal from '@/components/IframeModal'
 
 const archivo = Archivo({ subsets: ['latin'] });
 
+export interface ScheduleItem {
+  date: Date;
+  description: string;
+  event_name: string;
+  id: string;
+};
+
 export default function Home() {
   const [isRevHovered, setIsRevHovered] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [scheduleItems, setScheduleItems] = useState([]);
+  const [scheduleItems, setScheduleItems] = useState<ScheduleItem[]>();
   const [loadingComplete, setLoadingComplete] = useState(false);
   const [carPosition, setCarPosition] = useState({ x: 0, y: 0 });
   const [openGame, setOpenGame] = useState(false);
@@ -46,6 +53,11 @@ export default function Home() {
   }, [carPosition.x]);
 
   useEffect(() => {
+    const fetchSchedule = async () => {
+      const fetchResult = await fetch('https://hum-console.vercel.app/api/hh23').then((res) => res.json());
+      setScheduleItems(fetchResult.Items);
+    }
+    fetchSchedule();
     setMounted(true);
   }, []);
 
@@ -160,8 +172,18 @@ export default function Home() {
                 <Image src="/assets/schedule-title-big.png" width={700} height={200} alt="schedule-title" className="hidden lg:flex" />
               </motion.div>
               <div className="relative flex flex-col lg:flex-row items-center lg:items-start lg:justify-center max-[1206px]:w-full w-[1206px]">
-                <Receipt day="SATURDAY" scheduleItems={saturdayScheduleItems} />
-                <Receipt day="SUNDAY" scheduleItems={sundayScheduleItems} />
+                {scheduleItems &&
+                  <>
+                    <Receipt day="SATURDAY" scheduleItems={scheduleItems.filter((item) => {
+                      const temp = new Date(item.date);
+                      return temp.getDay() === 6;
+                    })} />
+                    <Receipt day="SUNDAY" scheduleItems={scheduleItems.filter((item) => {
+                      const temp = new Date(item.date);
+                      return temp.getDay() === 0;
+                    })} />
+                  </>
+                }
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }} viewport={{ once: true }}>
                   <Link href="#resources" scroll={false} className="hidden lg:flex" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                     {isRevHovered ? (
