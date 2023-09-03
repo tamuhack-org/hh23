@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Archivo } from 'next/font/google'
 import Link from 'next/link'
 import SmallNavbar from '../components/SmallNavbar'
-import { saturdayScheduleItems, sundayScheduleItems } from '../data/constants'
 import Receipt from '../components/Receipt'
 import Navbar from '@/components/Navbar'
 import InfoSection from '@/components/InfoSection'
@@ -25,14 +24,12 @@ export interface ScheduleItem {
 };
 
 export default function Home() {
-  const [isRevHovered, setIsRevHovered] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [scheduleItems, setScheduleItems] = useState<ScheduleItem[]>();
   const [loadingComplete, setLoadingComplete] = useState(false);
   const [carPosition, setCarPosition] = useState({ x: 0, y: 0 });
   const [openGame, setOpenGame] = useState(false);
-  const onMouseEnter = () => setIsRevHovered(true);
-  const onMouseLeave = () => setIsRevHovered(false);
+
 
   const handleDrag = (e: any, ui: any) => {
     const { x, y } = carPosition;
@@ -184,15 +181,6 @@ export default function Home() {
                     })} />
                   </>
                 }
-                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }} viewport={{ once: true }}>
-                  <Link href="#resources" scroll={false} className="hidden lg:flex" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-                    {isRevHovered ? (
-                      <Image src="/assets/retro-rev-click.png" width={300} height={200} alt="retro-rev-click" className="lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" priority />
-                    ) : (
-                      <Image src="/assets/retro-rev.png" width={300} height={200} alt="retro-rev" className="lg:flex lg:absolute lg:bottom-16 lg:right-40 xl:right-48" />
-                    )}
-                  </Link>
-                </motion.div>
               </div>
             </div>
             {/* Schedule to Prizes transition */}
