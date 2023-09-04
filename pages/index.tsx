@@ -79,8 +79,8 @@ export default function Home() {
   }
 
   return (
-    <main
-      className={`${archivo.className}`}
+    <motion.main
+      className={`${archivo.className}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}
     >
       <AnimatePresence>
         {openGame && <IframeModal url="https://nitroguy10.github.io/Rev-Your-Engines/" onClose={closeGame} />}
@@ -212,6 +212,6 @@ export default function Home() {
           </>
         }
       </div>
-    </main >
+    </motion.main>
   )
 };
