@@ -4,6 +4,8 @@ import { Space_Mono, Archivo } from 'next/font/google';
 import { motion } from 'framer-motion';
 import { ScheduleItem } from '@/pages';
 import Link from 'next/link';
+import { MdInfoOutline } from 'react-icons/md';
+import { Tooltip } from '@chakra-ui/react';
 
 const archivo = Archivo({ subsets: ['latin'] });
 const spaceMono = Space_Mono({ weight: ['400', '700'], subsets: ['latin'] });
@@ -42,9 +44,16 @@ const Receipt = ({ day, scheduleItems }: ReceiptProps) => {
                 hour12: true,
               })}
             </p>
-            <p className="w-[70%] lg:w-[80%]">
-              {scheduleItem.event_name}
-            </p>
+            {scheduleItem.description.length > 0 ?
+              <Tooltip label={scheduleItem.description} placement="bottom-start">
+                <p className="w-[70%] lg:w-[80%] underline decoration-dotted">
+                  {scheduleItem.event_name}
+                </p>
+              </Tooltip> :
+              <p className="w-[70%] lg:w-[80%]">
+                {scheduleItem.event_name}
+              </p>
+            }
           </div>
         )}
         <Image src="/assets/barcode.png" width={177} height={69} alt="barcode" className="py-2 lg:py-8" />
