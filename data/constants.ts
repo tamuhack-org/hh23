@@ -205,7 +205,7 @@ export const resources = [
   },
   {
     name: 'Devpost',
-    link: 'https://helpr.vercel.app',
+    link: 'https://howdyhack-2023.devpost.com',
     description: 'Devpost is where you submit your projects. It also shows the rules, prizes, sponsors, and judges. Showcase your work and compete with other hackers!',
   },
   // {
@@ -215,7 +215,7 @@ export const resources = [
   // },
   {
     name: 'Hacker Guide',
-    link: 'https://helpr.vercel.app',
+    link: '/assets/HH23-Hacker-Start-Guide-Resources.pdf',
     description: 'Check out our hacker guide, where you can find the best resources for your project. Our hacker guide resource is your one-stop shop for hackathon success!',
   },
 ];
