@@ -4,7 +4,7 @@ import { Space_Mono, Archivo } from 'next/font/google';
 import { motion } from 'framer-motion';
 import { ScheduleItem } from '@/pages';
 import Link from 'next/link';
-import { MdInfoOutline } from 'react-icons/md';
+import { LiaInfoCircleSolid } from 'react-icons/lia';
 import { Tooltip } from '@chakra-ui/react';
 
 const archivo = Archivo({ subsets: ['latin'] });
@@ -45,11 +45,23 @@ const Receipt = ({ day, scheduleItems }: ReceiptProps) => {
               })}
             </p>
             {scheduleItem.description.length > 0 ?
-              <Tooltip label={scheduleItem.description} placement="bottom-start">
-                <p className="w-[70%] lg:w-[80%] underline decoration-dotted">
-                  {scheduleItem.event_name}
-                </p>
-              </Tooltip> :
+              // <div className="flex flex-col gap-1 w-[70%] lg:w-[80%]">
+              //   <p>
+              //     {scheduleItem.event_name}
+              //   </p>
+              //   <p className="text-xs">
+              //     {scheduleItem.description}
+              //   </p>
+              // </div>
+              <div className="flex flex-row justify-between w-[70%] lg:w-[80%]">
+                <p>{scheduleItem.event_name}</p>
+                <Tooltip label={scheduleItem.description}>
+                  <span>
+                    <LiaInfoCircleSolid size={20} />
+                  </span>
+                </Tooltip>
+              </div>
+              :
               <p className="w-[70%] lg:w-[80%]">
                 {scheduleItem.event_name}
               </p>
