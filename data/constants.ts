@@ -218,6 +218,11 @@ export const resources = [
     link: '/assets/HH23-Hacker-Start-Guide-Resources.pdf',
     description: 'Check out our hacker guide, where you can find the best resources for your project. Our hacker guide resource is your one-stop shop for hackathon success!',
   },
+  {
+    name: 'Discord',
+    link: 'https://discord.gg/VZyKP4JcC3',
+    description: 'Discord is where we will be sending announcements throughout the event. You can also use it to find a team, connect with other hackers, or get in contact with an organizer.'
+  },
 ];
 
 export const socials = [
@@ -232,10 +237,6 @@ export const socials = [
   {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/company/tamuhack',
-  },
-  {
-    name: 'Discord',
-    link: 'https://discord.gg/VZyKP4JcC3',
   },
 ];
 
