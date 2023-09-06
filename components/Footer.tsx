@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-wrap justify-start lg:justify-end flex-grow gap-12">
           {/* UNCOMMENT WHEN EVENT STARTS */}
-          {/* <div>
+          <div>
             <p className="text-base mb-2">Hacker Resources</p>
             <div className="flex flex-col gap-1 mb-2">
               {resources.map((resource) =>
@@ -63,9 +63,9 @@ const Footer = () => {
                   {resource.name}
                 </Link>)}
             </div>
-          </div> */}
+          </div>
           {/* COMMENT WHEN EVENT STARTS */}
-          <div className="opacity-50 cursor-not-allowed select-none">
+          {/* <div className="opacity-50 cursor-not-allowed select-none">
             <p className="text-base mb-2 cursor-not-allowed">Hacker Resources</p>
             <div className="flex flex-col gap-1 mb-2">
               {resources.map((resource) =>
@@ -73,7 +73,7 @@ const Footer = () => {
                   {resource.name}
                 </label>)}
             </div>
-          </div>
+          </div> */}
           <div>
             <p className="text-base mb-2">Socials</p>
             <div className="flex flex-col gap-1 mb-2">
