@@ -46,7 +46,7 @@ const InfoSection = () => {
               </p>
             </div>
           </motion.div>
-          <p className="text-[10px] lg:text-xs mt-6 lg:mt-12 italic text-center">
+          <p className="text-[10px] lg:text-xl mt-6 lg:mt-12 italic text-center">
             Applications are considered on a rolling basis; an application being accepted does not guarantee a spot in the hackathon. We have a limited space at the MSC, so we kindly ask you to arrive early on the day of the hackathon.
           </p>
         </div>
