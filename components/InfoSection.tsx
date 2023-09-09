@@ -20,7 +20,7 @@ const InfoSection = () => {
             <div className="flex flex-col justify-center items-start border-[rgb(255,79,128,0.5)] border-double rounded-3xl border-8 p-5 lg:p-6 w-full gap-2 lg:gap-3">
               <h2 className="text-turquoise font-black text-md lg:text-2xl">Location & Parking</h2>
               <p className="text-xs lg:text-lg">
-                Bethancourt Ballroom (MSC 2300)<br />
+                MSC 2400<br />
                 730 Olsen Blvd, College Station, TX 77845
               </p>
               <Link href="/assets/msc-map.png" target="_blank" rel="noopener" className="underline font-bold text-xs lg:text-lg -mt-1 hover:opacity-75 transition duration-200">
