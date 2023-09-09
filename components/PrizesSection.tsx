@@ -62,10 +62,10 @@ const PrizesSection = () => {
               <div className="flex flex-row justify-end items-center w-1/2 gap-2">
                 <Image src="/assets/light-gray-circle.svg" width={20} height={20} alt="mint-green-circle" />
                 <Image src="/assets/light-gray-circle.svg" width={20} height={20} alt="mint-green-circle" />
-                {/* <button className="hover:scale-110 transition duration-200" onClick={() => setModalOpen(true)}>
+                <button className="hover:scale-110 transition duration-200" onClick={() => setModalOpen(true)}>
                   <Image src="/assets/hacker-queue.png" width={170} height={20} alt="hacker-queue" />
-                </button> */}
-                <Image src="/assets/hacker-queue.png" width={100} height={20} alt="hacker-queue" className="cursor-not-allowed opacity-50" />
+                </button>
+                {/* <Image src="/assets/hacker-queue.png" width={100} height={20} alt="hacker-queue" className="cursor-not-allowed opacity-50" /> */}
               </div>
             </div>
           </motion.div>
