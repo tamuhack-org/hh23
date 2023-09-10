@@ -178,7 +178,7 @@ export const prizes = [
   {
     title: 'Third Overall',
     description: 'This prize will be awarded to the third place project submission',
-    prize: 'Amazon Echo Dot + Smart Bulb',
+    prize: 'Amazon Echo Dot',
   },
   {
     title: 'Best UI/UX',
