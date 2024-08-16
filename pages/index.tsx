@@ -84,7 +84,7 @@ export default function Home() {
       className={`${archivo.className}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}
     >
       <AnimatePresence>
-        {openGame && <IframeModal url="https://nitroguy10.github.io/Rev-Your-Engines/" onClose={closeGame} />}
+        {openGame && <IframeModal url="https://nitroguy.xyz/Rev-Your-Engines/" onClose={closeGame} />}
       </AnimatePresence>
       <Image src="/assets/mountain-stars.svg" alt="preload" width={0} height={0} priority className="hidden" />
       <div className="bg-light-theme-yellow bg-gradient-to-t from-[rgb(255,22,22,0.5)] to-light-theme-yellow dark:bg-dark-purple dark:from-transparent dark:to-transparent dark:text-black">
