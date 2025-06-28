@@ -11,7 +11,7 @@ const FaqSection = () => {
   return (
     <div id="faq" className="flex flex-col items-center justify-center bg-paler-yellow pt-12 lg:pb-16 lg:pt-24">
       <div className="relative w-full h-4 bg-white -top-10 mb-2 lg:-top-20" />
-      <motion.div className="relative flex flex-col items-center justify-center min-[500px]:w-[500px] lg:w-[1000px] xl:w-[1280px] xl:px-16" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
+      <motion.div className="relative flex flex-col items-center justify-center min-[500px]:w-[500px] lg:w-[1000px] xl:w-[1220px] xl:px-16" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
         <Image src="/assets/menu-title-small.png" width={371} height={100} alt="menu-title-small" className="absolute w-2/3 -top-6 z-10 lg:hidden" />
         <Image src="/assets/menu-title-big.png" width={371} height={100} alt="menu-title" className="hidden absolute w-1/3 top-24 z-10 lg:flex" />
         {/* Top menu border */}

@@ -9,7 +9,7 @@ const InfoSection = () => {
   return (
     <>
       <div id="info" className="flex flex-col items-center border-t-[12px] lg:border-t-[20px] 2xl:border-t-[32px] border-lighter-blue px-8 pt-8 lg:pt-20 bg-white w-full z-50">
-        <div className="flex flex-col justify-center items-center w-full xl:w-[1280px]">
+        <div className="flex flex-col justify-center items-center w-full max-w-[1280px]">
           <motion.h1 className={`${zenTokyoZoo.className} text-center text-turquoise text-4xl mb-6 lg:text-6xl lg:mb-2`} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
             WELCOME IN, AGGIES!
           </motion.h1>
