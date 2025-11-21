@@ -52,7 +52,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchSchedule = async () => {
-      const fetchResult = await fetch('https://hum-console.vercel.app/api/hh23').then((res) => res.json());
+      const fetchResult = await fetch('https://hum-console.vercel.app/api/hh23').then((res) => res.json()) as { Items: ScheduleItem[] };
       setScheduleItems(fetchResult.Items);
     }
     fetchSchedule();
