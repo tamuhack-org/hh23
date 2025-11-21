@@ -1,6 +1,6 @@
-import { Tooltip } from '@chakra-ui/react';
-import React, { useState } from 'react';
-import { LiaInfoCircleSolid } from 'react-icons/lia';
+import { Tooltip } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { LiaInfoCircleSolid } from "react-icons/lia";
 
 const TooltipWithClick = ({ label }: { label: string }) => {
   const [isLabelOpen, setIsLabelOpen] = useState(false);
@@ -16,7 +16,7 @@ const TooltipWithClick = ({ label }: { label: string }) => {
         />
       </span>
     </Tooltip>
-  )
-}
+  );
+};
 
 export default TooltipWithClick;

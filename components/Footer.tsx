@@ -1,6 +1,6 @@
-import { resources, socials, workshops } from '@/data/constants';
-import Link from 'next/link';
-import React from 'react'
+import { resources, socials, workshops } from "@/data/constants";
+import Link from "next/link";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -8,7 +8,10 @@ const Footer = () => {
       <div className="lg:flex lg:justify-between items-center px-8 lg:px-16 pt-8 lg:pt-16 text-light-theme-pink dark:text-pale-yellow bg-light-theme-yellow dark:bg-dark-purple border-t-8 border-light-blue dark:border-lighter-blue">
         <div className="lg:text-start text-center">
           <p className="mb-0 text-2xl font-bold">Sign up to our newsletter</p>
-          <p className="font-poppins navy">Stay connected! Sign up for our mailing list for events, updates, and more.</p>
+          <p className="font-poppins navy">
+            Stay connected! Sign up for our mailing list for events, updates,
+            and more.
+          </p>
         </div>
         <form
           action="https://tamuhack.us9.list-manage.com/subscribe/post?u=ba74e26a78411ab40af6384c5&amp;id=2f4969eb6d"
@@ -20,7 +23,9 @@ const Footer = () => {
           className="flex flex-col lg:flex-row items-center lg:items-stretch justify-start gap-2"
         >
           <div className="w-full lg:flex-none flex flex-row max-[320px]:flex-col max-[320px]:justify-stretch justify-center items-stretch gap-3 lg:gap-5 py-4">
-            <label htmlFor="mce-EMAIL" className="hidden">Email Address</label>
+            <label htmlFor="mce-EMAIL" className="hidden">
+              Email Address
+            </label>
             <input
               type="text"
               name="EMAIL"
@@ -51,17 +56,26 @@ const Footer = () => {
       <div className="lg:flex justify-between px-8 lg:px-16 py-8 lg:py-16 text-light-theme-pink dark:text-pale-yellow bg-light-theme-yellow dark:bg-dark-purple">
         <div className="lg:w-1/5">
           <p className="font-black text-3xl mb-8">HowdyHack 2023</p>
-          <p className="font-medium text-xl mb-8">Website brought to you by the TAMUhack Creative + Technology Teams</p>
+          <p className="font-medium text-xl mb-8">
+            Website brought to you by the TAMUhack Creative + Technology Teams
+          </p>
         </div>
         <div className="flex flex-wrap justify-start lg:justify-end flex-grow gap-12">
           {/* UNCOMMENT WHEN EVENT STARTS */}
           <div>
             <p className="text-base mb-2">Hacker Resources</p>
             <div className="flex flex-col gap-1 mb-2">
-              {resources.map((resource) =>
-                <Link href={resource.link} target="_blank" rel="noreferrer noopener" className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200" key={resource.name}>
+              {resources.map((resource) => (
+                <Link
+                  href={resource.link}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200"
+                  key={resource.name}
+                >
                   {resource.name}
-                </Link>)}
+                </Link>
+              ))}
             </div>
           </div>
           {/* COMMENT WHEN EVENT STARTS */}
@@ -77,19 +91,33 @@ const Footer = () => {
           <div>
             <p className="text-base mb-2">Socials</p>
             <div className="flex flex-col gap-1 mb-2">
-              {socials.map(social =>
-                <Link href={social.link} target="_blank" rel="noreferrer noopener" className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200" key={social.name}>
+              {socials.map((social) => (
+                <Link
+                  href={social.link}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200"
+                  key={social.name}
+                >
                   {social.name}
-                </Link>)}
+                </Link>
+              ))}
             </div>
           </div>
           <div>
             <p className="text-base mb-2">Workshops</p>
             <div className="flex flex-col gap-1 mb-2">
-              {workshops.map(workshop =>
-                <Link href={workshop.link} target="_blank" rel="noreferrer noopener" className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200" key={workshop.name}>
+              {workshops.map((workshop) => (
+                <Link
+                  href={workshop.link}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="font-semibold text-lg hover:text-shadow-light-theme-pink-glow dark:hover:text-shadow-pale-yellow-glow transition-text-shadow duration-200"
+                  key={workshop.name}
+                >
                   {workshop.name}
-                </Link>)}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
