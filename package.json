@@ -6,25 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@opennextjs/cloudflare": "^1.13.1",
     "@types/node": "20.3.0",
     "@types/react": "18.2.11",
     "@types/react-anchor-link-smooth-scroll": "^1.0.2",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
     "eslint": "8.42.0",
-    "eslint-config-next": "13.4.4",
     "framer-motion": "^10.16.3",
-    "next": "^13.4.4",
+    "next": "^14.2.33",
     "next-themes": "^0.2.1",
     "postcss": "8.4.24",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-draggable": "^4.4.5",
     "react-icons": "^4.10.1",
     "react-onclickoutside": "^6.13.0",
@@ -32,6 +35,8 @@
     "typescript": "5.1.3"
   },
   "devDependencies": {
-    "@types/react-onclickoutside": "^6.7.4"
+    "@types/react-onclickoutside": "^6.7.4",
+    "eslint-config-next": "^14.2.33",
+    "wrangler": "^4.50.0"
   }
 }
