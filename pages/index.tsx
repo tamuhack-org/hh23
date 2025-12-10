@@ -53,8 +53,8 @@ export default function Home() {
     const fetchSchedule = async () => {
       const fetchResult = (await fetch(
         "https://team.tamuhack.org/api/hh23",
-      ).then((res) => res.json())) as { Items: ScheduleItem[] };
-      setScheduleItems(fetchResult.Items);
+      ).then((res) => res.json())) as  ScheduleItem[];
+      setScheduleItems(fetchResult);
     };
     fetchSchedule();
     setMounted(true);
