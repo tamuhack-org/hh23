@@ -20,7 +20,7 @@ const archivo = Archivo({ subsets: ["latin"] });
 export interface ScheduleItem {
   date: Date;
   description: string;
-  event_name: string;
+  eventName: string;
   id: string;
 }
 
@@ -52,7 +52,7 @@ export default function Home() {
   useEffect(() => {
     const fetchSchedule = async () => {
       const fetchResult = (await fetch(
-        "https://hum-console.vercel.app/api/hh23",
+        "https://team.tamuhack.org/api/hh23",
       ).then((res) => res.json())) as { Items: ScheduleItem[] };
       setScheduleItems(fetchResult.Items);
     };

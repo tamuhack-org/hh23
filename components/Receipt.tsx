@@ -71,11 +71,11 @@ const Receipt = ({ day, scheduleItems }: ReceiptProps) => {
                 //   </p>
                 // </div>
                 <div className="flex flex-row justify-between gap-2 lg:gap-0 w-[70%] lg:w-[80%]">
-                  <p>{scheduleItem.event_name}</p>
+                  <p>{scheduleItem.eventName}</p>
                   <TooltipWithClick label={scheduleItem.description} />
                 </div>
               ) : (
-                <p className="w-[70%] lg:w-[80%]">{scheduleItem.event_name}</p>
+                <p className="w-[70%] lg:w-[80%]">{scheduleItem.eventName}</p>
               )}
             </div>
           ))}
